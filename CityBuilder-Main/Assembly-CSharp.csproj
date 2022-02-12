@@ -65,6 +65,10 @@
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PathFollow.cs" />
+    <Compile Include="Assets\Scripts\Initializers\VehicleInit.cs" />
+    <Compile Include="Assets\Scripts\GlobalSettings.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
