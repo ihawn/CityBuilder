@@ -13,10 +13,11 @@ public class Vehicle
     public Person Driver { get; set; }
     public List<Person> Passengers { get; set; }
     public int Capacity { get; set; }
-    public GlobalSettings GlobalSettings { get; set; }
 
-    public Vehicle(VehicleType type,
+    public Vehicle(
+        VehicleType type,
         GameObject obj,
+        Road road,
         PathFollow pathFollow = null, 
         int? capacity = null, 
         List<Cargo> cargoList = null, 
@@ -29,7 +30,7 @@ public class Vehicle
         if (pathFollow != null)
             PathFollow = pathFollow;
         else
-            PathFollow = new PathFollow(ObjectSettings.GameObject.transform, PathType.road);
+            PathFollow = new PathFollow(ObjectSettings.GameObject.transform, road, PathType.road, ObjectSettings.GameObject.transform);
 
         if (cargoList != null)
             CargoList = cargoList;
@@ -44,8 +45,9 @@ public class Vehicle
         switch (type)
         {
             case VehicleType.car:
+                VehicleType = VehicleType.car;
                 if (capacity != null)
-                    Capacity = (int)capacity;
+                    Capacity = capacity.Value;
                 else
                     Capacity = GlobalSettings.CarCapacity;
                 break;
