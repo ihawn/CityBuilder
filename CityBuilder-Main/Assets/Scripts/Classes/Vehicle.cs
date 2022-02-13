@@ -30,7 +30,7 @@ public class Vehicle
         if (pathFollow != null)
             PathFollow = pathFollow;
         else
-            PathFollow = new PathFollow(road.PathCreator, ObjectSettings.GameObject.transform, PathType.road, ObjectSettings.GameObject.transform, roadFollowed: road);
+            PathFollow = new PathFollow(ObjectSettings.GameObject.transform, PathType.road, ObjectSettings.GameObject.transform, roadFollowed: road);
 
         if (cargoList != null)
             CargoList = cargoList;

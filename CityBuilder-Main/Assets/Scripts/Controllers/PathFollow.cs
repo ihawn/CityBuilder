@@ -16,14 +16,12 @@ public class PathFollow
     public Road RoadFollowed { get; set; }
 
     public PathFollow(
-        PathCreator pathCreator,
         Transform transform,
         PathType type,
         Transform follower,
         bool forwards = true,
         Road roadFollowed = null)
     {
-        PathCreator = pathCreator;
         Transform = transform;
         DistanceTraveled = 0;
         PathType = type;
@@ -41,7 +39,7 @@ public class PathFollow
     public void FollowPath()
     {
         VertexPath path = RoadFollowed.VertexPath;
-        Vector3 offset = PathCreator.path.GetNormalAtDistance(DistanceTraveled) * GlobalSettings.LaneOffset * (Forwards ? -1 : 1);
+        Vector3 offset = path.GetNormalAtDistance(DistanceTraveled) * GlobalSettings.LaneOffset * (Forwards ? -1 : 1);
         DistanceTraveled += Speed * Time.deltaTime * (Forwards ? -1 : 1);
         Transform.position = path.GetPointAtDistance(DistanceTraveled) + offset;
         Transform.rotation = path.GetRotationAtDistance(DistanceTraveled)*Quaternion.Euler(0, 0, 90);

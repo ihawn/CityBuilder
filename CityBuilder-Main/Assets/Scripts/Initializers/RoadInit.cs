@@ -9,11 +9,9 @@ public class RoadInit : MonoBehaviour
 
     public void Init(GameManager gm)
     {
-        for(int i = 0; i < RoadGameObjects.Count; i++)
+        foreach(GameObject g in RoadGameObjects)
         {
-            GameObject g = RoadGameObjects[i];
-            PathCreator p = g.GetComponent<PathCreator>();
-            Road r = new Road(g, p);
+            Road r = new Road(g);
             gm.Roads.Add(r);
         }
     }
