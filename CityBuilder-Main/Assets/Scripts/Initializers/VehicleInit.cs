@@ -5,21 +5,12 @@ using UnityEngine;
 public class VehicleInit : MonoBehaviour
 {
     public List<GameObject> VehicleGameObjects;
-    public List<GameObject> RoadGameObjects;
     
     public void Init(GameManager gm)
     {
-        //Road init
-        foreach (GameObject g in RoadGameObjects)
+        foreach(GameObject g in VehicleGameObjects)
         {
-            Road r = new Road(g);
-            gm.Roads.Add(r);
-        }
-
-        //Vehicle Init
-        foreach (GameObject g in VehicleGameObjects)
-        {
-            Vehicle v = new Vehicle(VehicleType.car, g, gm.Roads[0]);
+            Vehicle v = new Vehicle(VehicleType.car, g);
             gm.Vehicles.Add(v);
         }
     }

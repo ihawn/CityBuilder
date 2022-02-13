@@ -6,16 +6,9 @@ public class GameManager : MonoBehaviour
 {
     [Header("Scene Objects")]
     public VehicleInit VehicleInit;
-    public GlobalSettings GlobalSettings;
 
     [Header("Vehicle Lists")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
-    public List<Road> Roads = new List<Road>();
-
-    void Awake()
-    {
-        GlobalSettings.UpdateParameters();
-    }
 
     void Start()
     {
@@ -24,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        GlobalSettings.UpdateParameters();
         UpdateVehicles();
     }
 

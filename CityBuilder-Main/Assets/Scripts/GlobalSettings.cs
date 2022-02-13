@@ -11,20 +11,17 @@ public class GlobalSettings : MonoBehaviour
     public static int CarCapacity;
 
     [Header("Road Parameters")]
-    public float speedLimit = 5;
-    public static float SpeedLimit;
-    public float laneOffset = 0.18f;
-    public static float LaneOffset;
+    public float residentialRoadSpeed = 5;
+    public static float ResidentialRoadSpeed;
 
     [Header("Temporary Parameters")]
     public PathCreator pathCreator;
     public static PathCreator PathCreator;
 
-    public void UpdateParameters()
+    void Awake()
     {
         CarCapacity = carCapactiy;
-        SpeedLimit = speedLimit;
+        ResidentialRoadSpeed = residentialRoadSpeed;
         PathCreator = pathCreator;
-        LaneOffset = laneOffset;
     }
 }
