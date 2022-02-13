@@ -10,28 +10,41 @@ public class PathFollow
     public Transform Transform { get; set; }
     public float Speed { get; set; }
     public float DistanceTraveled { get; set; }
-    public object Follower { get; set; }
+    public Transform Follower { get; set; }
     public PathType PathType { get; set; }
+    public bool Forwards { get; set; }
+    public Road RoadFollowed { get; set; }
 
-    public PathFollow(Transform transform, PathType type)
+    public PathFollow(
+        PathCreator pathCreator,
+        Transform transform,
+        PathType type,
+        Transform follower,
+        bool forwards = true,
+        Road roadFollowed = null)
     {
-        PathCreator = GlobalSettings.PathCreator;
+        PathCreator = pathCreator;
         Transform = transform;
         DistanceTraveled = 0;
         PathType = type;
+        Forwards = forwards;
+        RoadFollowed = roadFollowed;
 
         switch (type)
         {
             case PathType.road:
-                Speed = GlobalSettings.ResidentialRoadSpeed;
+                Speed = GlobalSettings.SpeedLimit;
+                Follower = follower;
                 break;
         }
     }
     public void FollowPath()
     {
-        DistanceTraveled -= Speed * Time.deltaTime;
-        Transform.position = PathCreator.path.GetPointAtDistance(DistanceTraveled);
-        Transform.rotation = PathCreator.path.GetRotationAtDistance(DistanceTraveled)*Quaternion.Euler(0, 0, 90);
+        VertexPath path = RoadFollowed.VertexPath;
+        Vector3 offset = PathCreator.path.GetNormalAtDistance(DistanceTraveled) * GlobalSettings.LaneOffset * (Forwards ? -1 : 1);
+        DistanceTraveled += Speed * Time.deltaTime * (Forwards ? -1 : 1);
+        Transform.position = path.GetPointAtDistance(DistanceTraveled) + offset;
+        Transform.rotation = path.GetRotationAtDistance(DistanceTraveled)*Quaternion.Euler(0, 0, 90);
     }
 }
 

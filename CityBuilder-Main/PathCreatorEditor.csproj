@@ -53,9 +53,9 @@
     <UnityVersion>2020.2.6f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\ExternalPackages\PathCreator\Core\Editor\Helper\ScreenSpacePolyLine.cs" />
-    <Compile Include="Assets\ExternalPackages\PathCreator\Core\Editor\Helper\MouseUtility.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Core\Editor\Helper\PathHandle.cs" />
+    <Compile Include="Assets\ExternalPackages\PathCreator\Core\Editor\Helper\MouseUtility.cs" />
+    <Compile Include="Assets\ExternalPackages\PathCreator\Core\Editor\Helper\ScreenSpacePolyLine.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Core\Editor\PathEditor.cs" />
   </ItemGroup>
   <ItemGroup>

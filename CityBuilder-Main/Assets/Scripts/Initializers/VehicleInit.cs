@@ -8,9 +8,9 @@ public class VehicleInit : MonoBehaviour
     
     public void Init(GameManager gm)
     {
-        foreach(GameObject g in VehicleGameObjects)
+        foreach (GameObject g in VehicleGameObjects)
         {
-            Vehicle v = new Vehicle(VehicleType.car, g);
+            Vehicle v = new Vehicle(VehicleType.car, g, gm.Roads[0]);
             gm.Vehicles.Add(v);
         }
     }
