@@ -6,8 +6,19 @@ using UnityEngine;
 public class Road
 {
     public ObjectSettings ObjectSettings { get; set; }
-    public int Lanes { get; set; }
-    public int SpeedLimit { get; set; }
-    public int Health { get; set; }
-    public bool IsInterstate { get; set; }
+    public float SpeedLimit { get; set; }
+
+    public Road(
+        GameObject obj,
+        float? speedLimit = null,
+        float? width = null
+        )
+    {
+        ObjectSettings = new ObjectSettings(obj);
+
+        if (speedLimit != null)
+            SpeedLimit = speedLimit.Value;
+        else
+            SpeedLimit = GlobalSettings.SpeedLimit;
+    }
 }
