@@ -6,6 +6,10 @@ using PathCreation;
 [System.Serializable]
 public class GlobalSettings : MonoBehaviour
 {
+    [Header("Object References")]
+    public GameManager gameManager;
+    public static GameManager GameManager;
+
     [Header("Car Parameters")]
     public int carCapactiy = 4;
     public static int CarCapacity;
@@ -26,5 +30,6 @@ public class GlobalSettings : MonoBehaviour
         SpeedLimit = speedLimit;
         PathCreator = pathCreator;
         LaneOffset = laneOffset;
+        GameManager = gameManager;
     }
 }

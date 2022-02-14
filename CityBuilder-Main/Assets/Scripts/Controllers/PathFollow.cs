@@ -7,22 +7,22 @@ using PathCreation;
 public class PathFollow
 {
     public PathCreator PathCreator { get; set; }
+    public GameObject FollowerObject { get; set; }
     public Transform Transform { get; set; }
     public float Speed { get; set; }
     public float DistanceTraveled { get; set; }
-    public Transform Follower { get; set; }
     public PathType PathType { get; set; }
     public bool Forwards { get; set; }
     public Road RoadFollowed { get; set; }
 
     public PathFollow(
-        Transform transform,
+        GameObject g,
         PathType type,
-        Transform follower,
         bool forwards = true,
         Road roadFollowed = null)
     {
-        Transform = transform;
+        Transform = g.transform;
+        FollowerObject = g;
         DistanceTraveled = 0;
         PathType = type;
         Forwards = forwards;
@@ -32,7 +32,6 @@ public class PathFollow
         {
             case PathType.road:
                 Speed = GlobalSettings.SpeedLimit;
-                Follower = follower;
                 break;
         }
     }

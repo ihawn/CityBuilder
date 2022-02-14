@@ -9,10 +9,14 @@ public class RoadInit : MonoBehaviour
 
     public void Init(GameManager gm)
     {
+        int id = 0;
         foreach(GameObject g in RoadGameObjects)
         {
-            Road r = new Road(g);
+            var rc = g.GetComponent<RoadProperties>();
+            Road r = new Road(g, rc.RoadType);
+            rc.Id = id;
             gm.Roads.Add(r);
+            id++;
         }
     }
 }
