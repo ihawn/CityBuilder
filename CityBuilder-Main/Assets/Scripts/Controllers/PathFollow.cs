@@ -27,6 +27,7 @@ public class PathFollow
         PathType = type;
         Forwards = forwards;
         RoadFollowed = roadFollowed;
+        PathCreator = roadFollowed.PathCreator;
 
         switch (type)
         {
@@ -34,14 +35,6 @@ public class PathFollow
                 Speed = GlobalSettings.SpeedLimit;
                 break;
         }
-    }
-    public void FollowPath()
-    {
-        VertexPath path = RoadFollowed.VertexPath;
-        Vector3 offset = path.GetNormalAtDistance(DistanceTraveled) * GlobalSettings.LaneOffset * (Forwards ? -1 : 1);
-        DistanceTraveled += Speed * Time.deltaTime * (Forwards ? -1 : 1);
-        Transform.position = path.GetPointAtDistance(DistanceTraveled) + offset;
-        Transform.rotation = path.GetRotationAtDistance(DistanceTraveled)*Quaternion.Euler(0, 0, 90);
     }
 }
 

@@ -15,6 +15,7 @@ public class VehicleInit : MonoBehaviour
             var vc = g.GetComponent<VehicleController>();
             vc.vehicle = v;
             vc.id = id;
+            vc.pf = v.PathFollow;
             gm.Vehicles.Add(v);
             id++;
         }

@@ -12,7 +12,7 @@ namespace PathCreation.Examples {
         void Start () {
             if (waypoints.Length > 0) {
                 // Create a new bezier path from the waypoints.
-                BezierPath bezierPath = new BezierPath (waypoints, closedLoop, PathSpace.xyz);
+                BezierPath bezierPath = new BezierPath (Vector3.zero, Vector3.zero, waypoints, closedLoop, PathSpace.xyz);
                 GetComponent<PathCreator> ().bezierPath = bezierPath;
             }
         }

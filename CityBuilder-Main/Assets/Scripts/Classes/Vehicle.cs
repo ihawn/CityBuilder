@@ -12,6 +12,7 @@ public class Vehicle
     public List<Cargo> CargoList { get; set; }
     public Person Driver { get; set; }
     public List<Person> Passengers { get; set; }
+    public VehicleController VehicleController { get; set; }
     public int Capacity { get; set; }
 
     public Vehicle(
@@ -26,6 +27,7 @@ public class Vehicle
     {
         Driver = driver;
         ObjectSettings = new ObjectSettings(obj);
+        VehicleController = obj.GetComponent<VehicleController>();
 
         if (pathFollow != null)
             PathFollow = pathFollow;

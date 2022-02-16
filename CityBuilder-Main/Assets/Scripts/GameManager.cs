@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
     public RoadInit RoadInit;
     public VehicleInit VehicleInit;
     public GlobalSettings GlobalSettings;
+    public GameObject Paths;
+    public DebugMethods DebugMethods;
 
-    [Header("Vehicle Lists")]
+    [Header("Transportation Lists")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
     public List<Road> Roads = new List<Road>();
+    public List<Intersection> Intersections = new List<Intersection>();
 
     void Awake()
     {
@@ -34,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (var vehicle in Vehicles)
         {
-            vehicle.PathFollow.FollowPath();
+            vehicle.VehicleController.FollowPath();
         }
     }
 }
