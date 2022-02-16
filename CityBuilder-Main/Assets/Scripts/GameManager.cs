@@ -5,18 +5,31 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("Scene Objects")]
+    public RoadInit RoadInit;
     public VehicleInit VehicleInit;
+    public GlobalSettings GlobalSettings;
+    public GameObject Paths;
+    public DebugMethods DebugMethods;
 
-    [Header("Vehicle Lists")]
+    [Header("Transportation Lists")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
+    public List<Road> Roads = new List<Road>();
+    public List<Intersection> Intersections = new List<Intersection>();
+
+    void Awake()
+    {
+        GlobalSettings.UpdateParameters();
+    }
 
     void Start()
     {
+        RoadInit.Init(this);
         VehicleInit.Init(this);
     }
 
     void Update()
     {
+        GlobalSettings.UpdateParameters();
         UpdateVehicles();
     }
 
@@ -24,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (var vehicle in Vehicles)
         {
-            vehicle.PathFollow.FollowPath();
+            vehicle.VehicleController.FollowPath();
         }
     }
 }

@@ -7,31 +7,34 @@ using PathCreation;
 public class PathFollow
 {
     public PathCreator PathCreator { get; set; }
+    public GameObject FollowerObject { get; set; }
     public Transform Transform { get; set; }
     public float Speed { get; set; }
     public float DistanceTraveled { get; set; }
-    public object Follower { get; set; }
     public PathType PathType { get; set; }
+    public bool Forwards { get; set; }
+    public Road RoadFollowed { get; set; }
 
-    public PathFollow(Transform transform, PathType type)
+    public PathFollow(
+        GameObject g,
+        PathType type,
+        bool forwards = true,
+        Road roadFollowed = null)
     {
-        PathCreator = GlobalSettings.PathCreator;
-        Transform = transform;
+        Transform = g.transform;
+        FollowerObject = g;
         DistanceTraveled = 0;
         PathType = type;
+        Forwards = forwards;
+        RoadFollowed = roadFollowed;
+        PathCreator = roadFollowed.PathCreator;
 
         switch (type)
         {
             case PathType.road:
-                Speed = GlobalSettings.ResidentialRoadSpeed;
+                Speed = GlobalSettings.SpeedLimit;
                 break;
         }
-    }
-    public void FollowPath()
-    {
-        DistanceTraveled -= Speed * Time.deltaTime;
-        Transform.position = PathCreator.path.GetPointAtDistance(DistanceTraveled);
-        Transform.rotation = PathCreator.path.GetRotationAtDistance(DistanceTraveled)*Quaternion.Euler(0, 0, 90);
     }
 }
 

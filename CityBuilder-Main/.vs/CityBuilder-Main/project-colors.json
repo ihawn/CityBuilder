@@ -10,7 +10,17 @@
       "ProjectGuid": "fbf068ae-af98-8c9a-8ddf-e4027c73a5d6",
       "DisplayName": "Assembly-CSharp",
       "ColorIndex": 0
+    },
+    "78b71be9-086a-1bad-f010-f4f3acf491a0": {
+      "ProjectGuid": "78b71be9-086a-1bad-f010-f4f3acf491a0",
+      "DisplayName": "PathCreator",
+      "ColorIndex": 1
+    },
+    "32c7e8da-648d-ca29-f452-22febb91bf79": {
+      "ProjectGuid": "32c7e8da-648d-ca29-f452-22febb91bf79",
+      "DisplayName": "PathCreatorEditor",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
