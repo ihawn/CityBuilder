@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\Scripts\Classes\Vehicle.cs" />
+    <Compile Include="Assets\Scripts\Classes\Node.cs" />
     <Compile Include="Assets\Scripts\Properties\RoadProperties.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\Scripts\Initializers\VehicleInit.cs" />
@@ -63,21 +64,28 @@
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\Scripts\Controllers\Vehicles\VehicleController.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathFollower.cs" />
+    <Compile Include="Assets\Scripts\Classes\Path.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathPlacer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Properties\NodeProperties.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PathController.cs" />
     <Compile Include="Assets\Scripts\GlobalSettings.cs" />
+    <Compile Include="Assets\Scripts\Initializers\PathInit.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\Scripts\Classes\Person.cs" />
     <Compile Include="Assets\Scripts\Classes\Building.cs" />
     <Compile Include="Assets\Scripts\Classes\Cargo.cs" />
     <Compile Include="Assets\Scripts\Controllers\PathFollow.cs" />
-    <Compile Include="Assets\Scripts\Classes\Node.cs" />
-    <Compile Include="Assets\Scripts\Classes\Path.cs" />
-    <Compile Include="Assets\Scripts\Properties\NodeProperties.cs" />
-    <Compile Include="Assets\Scripts\Initializers\PathInit.cs" />
-    <Compile Include="Assets\Scripts\Controllers\PathController.cs" />
+    <Compile Include="Assets\Scripts\Algorithms\AStar.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Packages\Microsoft.NETCore.Platforms.1.1.0\ThirdPartyNotices.txt" />
+     <None Include="Assets\Packages\C5.2.5.3\lib\netstandard1.0\C5.dll" />
+     <None Include="Assets\Packages\Microsoft.NETCore.Platforms.1.1.0\dotnet_library_license.txt" />
+     <None Include="Assets\Packages\C5.2.5.3\lib\netstandard1.0\C5.xml" />
+     <None Include="Assets\Packages\NETStandard.Library.1.6.1\dotnet_library_license.txt" />
+     <None Include="Assets\Packages\FibonacciHeap.2.0.2\lib\netstandard1.0\FibonacciHeap.dll" />
+     <None Include="Assets\Packages\NETStandard.Library.1.6.1\ThirdPartyNotices.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -299,6 +307,12 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="C5">
+      <HintPath>Assets\Packages\C5.2.5.3\lib\netstandard1.0\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="FibonacciHeap">
+      <HintPath>Assets\Packages\FibonacciHeap.2.0.2\lib\netstandard1.0\FibonacciHeap.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
