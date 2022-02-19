@@ -5,4 +5,5 @@ using UnityEngine;
 public class RoadProperties : MonoBehaviour
 {
     public List<RoadProperties> ConnectedRoadObjects;
+    public List<RoadProperties> JoinPerformedOn;
 }

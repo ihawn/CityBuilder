@@ -16,6 +16,6 @@ public class VehicleController : MonoBehaviour
         Vector3 offset = path.GetNormalAtDistance(pf.DistanceTraveled) * GlobalSettings.LaneOffset * (pf.Forwards ? -1 : 1);
         pf.DistanceTraveled += pf.Speed * Time.deltaTime * (pf.Forwards ? -1 : 1);
         transform.position = path.GetPointAtDistance(pf.DistanceTraveled) + offset;
-        transform.rotation = path.GetRotationAtDistance(pf.DistanceTraveled) * Quaternion.Euler(0, 0, 90);
+        transform.rotation = path.GetRotationAtDistance(pf.DistanceTraveled) * Quaternion.Euler(pf.Forwards ? 0 : 180, 0, 90);
     }
 }

@@ -12,7 +12,8 @@ public class VehicleInit : MonoBehaviour
         GameManager gm = GlobalSettings.GameManager;
         foreach (GameObject g in VehicleGameObjects)
         {
-            PathFollow pf = new PathFollow(gm.Nodes, PathType.road);
+            List<Node> path = PathController.GetRandomPath();
+            PathFollow pf = new PathFollow(path, PathType.road);
             Vehicle v = new Vehicle(VehicleType.car, g, pf);
             var vc = g.GetComponent<VehicleController>();
             vc.vehicle = v;

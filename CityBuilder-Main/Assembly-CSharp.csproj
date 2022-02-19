@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Classes\Path.cs" />
     <Compile Include="Assets\Scripts\Properties\NodeProperties.cs" />
     <Compile Include="Assets\Scripts\Initializers\PathInit.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PathController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

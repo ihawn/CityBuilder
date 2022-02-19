@@ -6,65 +6,71 @@ using System.Linq;
 public class PathInit : MonoBehaviour
 {
     public List<GameObject> RoadGameObjects;
-    public List<GameObject> NodeGameObjects;
+    public List<NodeProperties> NodeGameObjects;
 
     public void Init()
     {
         foreach(GameObject g in RoadGameObjects)
         {
+            //Join node parents by their socket nodes
             List<NodeProperties> nodes1 = new List<NodeProperties>();
             foreach(Transform t in g.transform)
-                if(g.name.ToLower().Contains("node"))
+                if(t.name.ToLower().Contains("node"))
                     nodes1.Add(t.GetComponent<NodeProperties>());
 
-            List<NodeProperties> nullRp1 = nodes1
-                .Where(x => x.ConnectedNodeGameObjects.Count == 1)
+            List<NodeProperties> socketNodes1 = nodes1
+                .Where(x => x.gameObject.tag == "NodeSocket")
                 .ToList();
 
             RoadProperties rp1 = g.GetComponent<RoadProperties>();
             foreach(RoadProperties rp2 in rp1.ConnectedRoadObjects)
             {
                 List<NodeProperties> nodes2 = new List<NodeProperties>();
-                foreach (Transform t in g.transform)
-                    if (g.name.ToLower().Contains("node"))
-                        nodes1.Add(t.GetComponent<NodeProperties>());
+                foreach (Transform t in rp2.transform)
+                    if (t.name.ToLower().Contains("node"))
+                        nodes2.Add(t.GetComponent<NodeProperties>());
 
-                List<NodeProperties> nullRp2 = nodes2
-                    .Where(x => x.ConnectedNodeGameObjects.Count == 1)
+                List<NodeProperties> socketNodes2 = nodes2
+                    .Where(x => x.gameObject.tag == "NodeSocket")
                     .ToList();
 
-                NodeProperties[] toJoin = new NodeProperties[] { nodes1[0], nodes2[0] };
+                NodeProperties[] toJoin = new NodeProperties[] { socketNodes1[0], socketNodes2[0] };
                 float minDist = float.MaxValue;
-                for(int i = 0; i < nodes1.Count; i++)
+                for(int i = 0; i < socketNodes1.Count; i++)
                 {
-                    for(int j = 0; j < nodes2.Count; j++)
+                    for(int j = 0; j < socketNodes2.Count; j++)
                     {
-                        float dist = Vector3.Distance(nodes1[i].transform.position, nodes2[j].transform.position);
+                        float dist = Vector3.Distance(socketNodes1[i].transform.position, socketNodes2[j].transform.position);
                         if (dist < minDist)
                         {
                             minDist = dist;
-                            toJoin = new NodeProperties[] { nodes1[i], nodes2[j] };
+                            toJoin = new NodeProperties[] { socketNodes1[i], socketNodes2[j] };
                         }
                     }
                 }
 
-                toJoin[0].ConnectedNodeGameObjects.Add(toJoin[1].gameObject);
-                toJoin[1].ConnectedNodeGameObjects.Add(toJoin[0].gameObject);
+                toJoin[0].ConnectedNodeGameObjects.Add(toJoin[1].gameObject);            
             }
+
+            NodeGameObjects.AddRange(nodes1);
+            //End join
+        }
+        int id = 0;
+        foreach(NodeProperties np in NodeGameObjects)
+        {
+            np.Id = id;
+            id++;
         }
 
-        int id = 0;
-        foreach(GameObject g in NodeGameObjects)
+        foreach(NodeProperties np in NodeGameObjects)
         {
-            if (g.name.ToLower().Contains("node"))
-            {
-                NodeProperties np = g.GetComponent<NodeProperties>();
-                Node n = new Node(g);
-                np.Id = id;
-                n.Id = id;
-                GlobalSettings.GameManager.Nodes.Add(n);
-                id++;
-            }
+            Node n = new Node(np.gameObject);
+            n.Id = np.Id;
+            n.ConnectedNodeIds = np.ConnectedNodeGameObjects
+                .Select(x => x.GetComponent<NodeProperties>().Id)
+                .ToList();
+            GlobalSettings.GameManager.Nodes.Add(n);
+            np.ThisNode = n;
         }
     }
 }

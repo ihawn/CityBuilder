@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject Paths;
     public DebugMethods DebugMethods;
 
-    [Header("Transportation Lists")]
+    [Header("Vehicles")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
+
+    [Header("Nodes")]
     public List<Node> Nodes = new List<Node>();
 
     void Awake()
