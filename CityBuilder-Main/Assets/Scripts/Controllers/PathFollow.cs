@@ -2,32 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using System.Linq;
 
 [System.Serializable]
 public class PathFollow
 {
     public PathCreator PathCreator { get; set; }
     public GameObject FollowerObject { get; set; }
-    public Transform Transform { get; set; }
     public float Speed { get; set; }
     public float DistanceTraveled { get; set; }
     public PathType PathType { get; set; }
     public bool Forwards { get; set; }
-    public Road RoadFollowed { get; set; }
 
-    public PathFollow(
-        GameObject g,
-        PathType type,
-        bool forwards = true,
-        Road roadFollowed = null)
+    public PathFollow(List<Node> nodes, PathType type)
     {
-        Transform = g.transform;
-        FollowerObject = g;
         DistanceTraveled = 0;
-        PathType = type;
-        Forwards = forwards;
-        RoadFollowed = roadFollowed;
-        PathCreator = roadFollowed.PathCreator;
+
+        List<Vector3> bezierPoints = nodes.Select(x => x.Position).ToList();
+        BezierPath path = new BezierPath(Vector3.zero, Vector3.zero, bezierPoints, false, PathSpace.xz);
+        PathCreator creator = GlobalSettings.GameManager.DebugMethods.DrawPath(path);
+        PathCreator = creator;
 
         switch (type)
         {

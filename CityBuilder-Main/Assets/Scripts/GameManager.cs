@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("Scene Objects")]
-    public RoadInit RoadInit;
+    public PathInit PathInit;
     public VehicleInit VehicleInit;
     public GlobalSettings GlobalSettings;
     public GameObject Paths;
@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Transportation Lists")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
-    public List<Road> Roads = new List<Road>();
-    public List<Intersection> Intersections = new List<Intersection>();
+    public List<Node> Nodes = new List<Node>();
 
     void Awake()
     {
@@ -23,8 +22,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        RoadInit.Init(this);
-        VehicleInit.Init(this);
+        PathInit.Init();
+        VehicleInit.Init();
     }
 
     void Update()

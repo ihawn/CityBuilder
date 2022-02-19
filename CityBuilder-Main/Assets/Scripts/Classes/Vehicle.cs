@@ -18,8 +18,7 @@ public class Vehicle
     public Vehicle(
         VehicleType type,
         GameObject obj,
-        Road road,
-        PathFollow pathFollow = null, 
+        PathFollow pathFollow, 
         int? capacity = null, 
         List<Cargo> cargoList = null, 
         Person driver = null,
@@ -28,11 +27,7 @@ public class Vehicle
         Driver = driver;
         ObjectSettings = new ObjectSettings(obj);
         VehicleController = obj.GetComponent<VehicleController>();
-
-        if (pathFollow != null)
-            PathFollow = pathFollow;
-        else
-            PathFollow = new PathFollow(ObjectSettings.GameObject, PathType.road, roadFollowed: road);
+        PathFollow = pathFollow;
 
         if (cargoList != null)
             CargoList = cargoList;

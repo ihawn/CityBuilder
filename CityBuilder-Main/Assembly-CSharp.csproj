@@ -56,26 +56,25 @@
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\Scripts\Classes\Vehicle.cs" />
     <Compile Include="Assets\Scripts\Properties\RoadProperties.cs" />
-    <Compile Include="Assets\Scripts\Initializers\RoadInit.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\Scripts\Initializers\VehicleInit.cs" />
     <Compile Include="Assets\Scripts\Classes\ObjectSettings.cs" />
-    <Compile Include="Assets\Scripts\Classes\Road.cs" />
+    <Compile Include="Assets\Scripts\DebugMethods.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\Scripts\Controllers\Vehicles\VehicleController.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathPlacer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Classes\RoadPiece.cs" />
     <Compile Include="Assets\Scripts\GlobalSettings.cs" />
-    <Compile Include="Assets\Scripts\Classes\Intersection.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
     <Compile Include="Assets\Scripts\Classes\Person.cs" />
     <Compile Include="Assets\Scripts\Classes\Building.cs" />
     <Compile Include="Assets\Scripts\Classes\Cargo.cs" />
     <Compile Include="Assets\Scripts\Controllers\PathFollow.cs" />
-    <Compile Include="Assets\Scripts\Properties\IntersectionProperties.cs" />
-    <Compile Include="Assets\Scripts\DebugMethods.cs" />
+    <Compile Include="Assets\Scripts\Classes\Node.cs" />
+    <Compile Include="Assets\Scripts\Classes\Path.cs" />
+    <Compile Include="Assets\Scripts\Properties\NodeProperties.cs" />
+    <Compile Include="Assets\Scripts\Initializers\PathInit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
