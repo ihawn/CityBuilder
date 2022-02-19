@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7904004457951254166}
   m_Layer: 0
   m_Name: Road Cross Road
-  m_TagString: Untagged
+  m_TagString: FourWay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConnectedRoadObjects: []
+  JoinPerformedOn: []
 --- !u!1 &2300995318807906067
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NodeSocket
+  - FourWay
+  - ThreeWay
   layers:
   - Default
   - TransparentFX
