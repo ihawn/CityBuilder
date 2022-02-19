@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public VehicleInit VehicleInit;
     public GlobalSettings GlobalSettings;
     public GameObject Paths;
-    public DebugMethods DebugMethods;
+    public PathCreatorController DebugMethods;
 
     [Header("Vehicles")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
@@ -31,14 +31,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         GlobalSettings.UpdateParameters();
-        UpdateVehicles();
-    }
-
-    void UpdateVehicles()
-    {
-        foreach (var vehicle in Vehicles)
-        {
-            vehicle.VehicleController.FollowPath();
-        }
+        ControllerBase.UpdateControllers();
     }
 }
