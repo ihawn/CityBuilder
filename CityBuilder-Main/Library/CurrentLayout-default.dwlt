@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 10}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -39,15 +39,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 4075
+    x: 4242
     y: 0
-    width: 366
-    height: 905
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 24}
+    width: 334
+    height: 988
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 25}
   m_Panes:
-  - {fileID: 24}
+  - {fileID: 25}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -60,24 +60,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectSettingsWindow
+  m_Name: NugetWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 783
-    height: 905
-  m_MinSize: {x: 300, y: 200}
+    width: 559
+    height: 988
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 16}
   m_Panes:
+  - {fileID: 19}
   - {fileID: 18}
   - {fileID: 17}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 3
+  m_LastSelected: 2
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,15 +94,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2957
+    x: 3045
     y: 0
-    width: 1484
-    height: 402
+    width: 1531
+    height: 319
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 27}
+  m_ActualView: {fileID: 28}
   m_Panes:
-  - {fileID: 27}
+  - {fileID: 28}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -122,13 +123,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 905
-    width: 4441
-    height: 402
+    y: 988
+    width: 4576
+    height: 319
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 93
+  controlID: 181
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,10 +151,10 @@ MonoBehaviour:
     y: 30
     width: 5120
     height: 1307
-  m_MinSize: {x: 1183, y: 492}
-  m_MaxSize: {x: 20008, y: 14042}
+  m_MinSize: {x: 982, y: 492}
+  m_MaxSize: {x: 20007, y: 14042}
   vertical: 0
-  controlID: 59
+  controlID: 230
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,15 +170,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 4441
+    x: 4576
     y: 0
-    width: 679
+    width: 544
     height: 1307
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 23}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 24}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &8
@@ -195,15 +196,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 783
+    x: 559
     y: 0
-    width: 1413
-    height: 905
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 26}
+    width: 1150
+    height: 988
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 27}
   m_Panes:
-  - {fileID: 26}
+  - {fileID: 27}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -223,15 +224,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2957
-    height: 402
+    width: 3045
+    height: 319
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 23}
+  - {fileID: 21}
   - {fileID: 20}
-  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 2
 --- !u!114 &10
@@ -256,7 +257,7 @@ MonoBehaviour:
     y: 0
     width: 5120
     height: 1357
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -284,8 +285,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 28}
-  m_MainToolbar: {fileID: 28}
+  - {fileID: 29}
+  m_MainToolbar: {fileID: 29}
   m_LastLoadedLayoutName: 
 --- !u!114 &12
 MonoBehaviour:
@@ -327,12 +328,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 4441
+    width: 4576
     height: 1307
-  m_MinSize: {x: 907, y: 492}
-  m_MaxSize: {x: 16007, y: 14042}
+  m_MinSize: {x: 706, y: 492}
+  m_MaxSize: {x: 16006, y: 14042}
   vertical: 1
-  controlID: 60
+  controlID: 132
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -354,12 +355,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 4441
-    height: 905
-  m_MinSize: {x: 907, y: 221}
-  m_MaxSize: {x: 16007, y: 4021}
+    width: 4576
+    height: 988
+  m_MinSize: {x: 706, y: 221}
+  m_MaxSize: {x: 16006, y: 4021}
   vertical: 0
-  controlID: 61
+  controlID: 133
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -375,19 +376,360 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2196
+    x: 1709
     y: 0
-    width: 1879
-    height: 905
+    width: 2533
+    height: 988
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 25}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 25}
-  - {fileID: 21}
+  - {fileID: 26}
+  - {fileID: 22}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 139222468, guid: 8dc1be91775c4bb469f6b74cef450eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: NuGet
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73
+    width: 558
+    height: 967
+  m_ViewDataDictionary: {fileID: 0}
+  hasRefreshed: 1
+  availablePackages:
+  - Id: C5
+    Version: 2.5.3
+    Title: C5
+    Description: The C5 Generic Collection Library for C# and CLI is a comprehensive
+      collection library supporting lists, sets, bags, dictionaries, priority queues,
+      (FIFO) queues, and (LIFO) stacks. C5 runs on .NET 3.5+, Silverlight 5, Windows
+      Phone 8, Xamarin.iOS, Xamarin.Android, and Mono.
+    Summary: 
+    ReleaseNotes: New support for .NET Standard 1.0 and Profile259
+    LicenseUrl: http://opensource.org/licenses/MIT
+    DownloadUrl: https://www.nuget.org/api/v2/package/C5/2.5.3
+    DownloadCount: 1744146
+    Authors: C5
+    Icon: {fileID: 0}
+    ProjectUrl: https://www.itu.dk/research/c5/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: ClrHeapAllocationAnalyzer
+    Version: 3.0.0
+    Title: ClrHeapAllocationAnalyzer
+    Description: "Roslyn based C# heap allocation diagnostic analyzer that can detect
+      explicit and many implicit allocations like boxing, display classes a.k.a closures,
+      implicit delegate creations, etc\n\n            The code-assist version that
+      integrates with the Visual Studio 2019 IDE is here, https://marketplace.visualstudio.com/items?itemName=MukulSabharwal.ClrHeapAllocationAnalyzer\n\n           
+      NOTE: This is the build analyzer.\n            NOTE: You require ' ' ' ' Visual
+      Studio 2019 ' ' ' ' for this to work."
+    Summary: 
+    ReleaseNotes: Summary of changes made in this release of the package.
+    LicenseUrl: https://github.com/Microsoft/RoslynClrHeapAllocationAnalyzer/blob/master/LICENSE
+    DownloadUrl: https://www.nuget.org/api/v2/package/ClrHeapAllocationAnalyzer/3.0.0
+    DownloadCount: 95868
+    Authors: mjsabby
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/Microsoft/RoslynClrHeapAllocationAnalyzer
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: FibonacciHeap
+    Version: 2.0.2
+    Title: FibonacciHeap
+    Description: Simple implementation of the Fibonacci Head Datastructure.
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: https://opensource.org/licenses/MIT
+    DownloadUrl: https://www.nuget.org/api/v2/package/FibonacciHeap/2.0.2
+    DownloadCount: 24749
+    Authors: Anton Herzog
+    Icon: {fileID: 0}
+    ProjectUrl: 
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: MicroHeap
+    Version: 1.0.0.0
+    Title: MicroHeap - Generic heap data structure in micro-format
+    Description: A generic heap datastructure, that satisfies the "heapify" algorithm.
+      A MicroLibrary is a "class library" that is added directly into your own project,
+      instead of being added as a separate reference.
+    Summary: A generic heap datastructure, that satisfies the "heapify" algorithm.
+      A MicroLibrary is a "class library" that is added directly into your own project,
+      instead of being added as a separate reference.
+    ReleaseNotes: 
+    LicenseUrl: http://microlibraries.codeplex.com/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/MicroHeap/1.0.0
+    DownloadCount: 2465
+    Authors: Lasse V. Karlsen
+    Icon: {fileID: 0}
+    ProjectUrl: http://microlibraries.codeplex.com/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: Retyped.heap
+    Version: 0.2.6733
+    Title: Retyped.heap
+    Description: Heap binding library for Bridge.NET projects.
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: https://github.com/bridgedotnet/Bridge/blob/master/LICENSE.md
+    DownloadUrl: https://www.nuget.org/api/v2/package/Retyped.heap/0.2.6733
+    DownloadCount: 4778
+    Authors: Object.NET, Inc.
+    Icon: {fileID: 0}
+    ProjectUrl: https://retyped.com/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: dotnet-gcdump
+    Version: 6.0.257301
+    Title: dotnet-gcdump
+    Description: .NET Managed Heap Dump and Analysis Tool
+    Summary: 
+    ReleaseNotes: .NET Managed Heap Dump and Analysis Tool
+    LicenseUrl: https://www.nuget.org/packages/dotnet-gcdump/6.0.257301/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/dotnet-gcdump/6.0.257301
+    DownloadCount: 3860022
+    Authors: Microsoft
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/dotnet/diagnostics
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: DSAA.Heap
+    Version: 1.0.5
+    Title: DSAA.Heap
+    Description: Easy to use BinaryHeap implementation with IEnumerable extension
+      for simple conversion.
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: 
+    DownloadUrl: https://www.nuget.org/api/v2/package/DSAA.Heap/1.0.5
+    DownloadCount: 3237
+    Authors: Aurimas Gecas
+    Icon: {fileID: 0}
+    ProjectUrl: 
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: FileHeap
+    Version: 1.0.5940.20342
+    Title: FileHeap
+    Description: Hash based folder structure used for storing a large number of files
+    Summary: 
+    ReleaseNotes: Changes.
+    LicenseUrl: http://choosealicense.com/licenses/mit/
+    DownloadUrl: https://www.nuget.org/api/v2/package/FileHeap/1.0.5940.20342
+    DownloadCount: 1440
+    Authors: "Rafael Salguero Iturr\xEDos"
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/RafaelSalguero/FileHeap
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: FSharp.BinaryHeap
+    Version: 0.0.3
+    Title: FSharp.BinaryHeap
+    Description: Binary heap with an API similar to Python's heapq module
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/FSharp.BinaryHeap/0.0.3/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/FSharp.BinaryHeap/0.0.3
+    DownloadCount: 734
+    Authors: Idrek
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/Idrek/FSharp.BinaryHeap
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: BinaryHeap
+    Version: 1.0.5847.25907
+    Title: BinaryHeap
+    Description: BinaryHeap tools
+    Summary: 
+    ReleaseNotes: Summary of changes made in this release of the package.
+    LicenseUrl: http://license_url_here_or_delete_this_line/
+    DownloadUrl: https://www.nuget.org/api/v2/package/BinaryHeap/1.0.5847.25907
+    DownloadCount: 1177
+    Authors: setiptah
+    Icon: {fileID: 0}
+    ProjectUrl: http://project_url_here_or_delete_this_line/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: SD.Tools.Algorithmia
+    Version: 1.4.0
+    Title: Algorithmia
+    Description: 'Algorithm and data-structure library for .NET 4.5.2+ / Netstandard
+      2.0+. Algorithmia contains sophisticated algorithms and data-structures like
+      graphs, priority queues, command, undo-redo and more.
+
+
+      Algorithmia is
+      one of the pillars of LLBLGen Pro and is used in production successfully since
+      May 2010. Many of the classes and algorithms in Algorithmia contain references
+      to papers and articles on Wikipedia or other websites where you can find additional
+      information regarding the algorithm or data-structure implemented.
+
+
+      The
+      core design of Algorithmia is about making algorithms and data-structures which
+      are known for many years available to the .NET developer in easy to use and
+      properly documented classes and methods. No class or method implemented in
+      Algorithmia re-implements a .NET BCL (base class library) class or method unless
+      it was necessary to do so (e.g. the linked list in .NET is re-implemented as
+      it doesn''t have an O(1) concat operation, which is necessary for the Fibonacci
+      heap).'
+    Summary: Advanced algorithm and data-structure library for .NET 3.5 and up. Algorithmia
+      contains sophisticated algorithms and data-structures like graphs, priority
+      queues, command, undo-redo and more.
+    ReleaseNotes: 
+    LicenseUrl: https://github.com/SolutionsDesign/Algorithmia/blob/master/LICENSE.txt
+    DownloadUrl: https://www.nuget.org/api/v2/package/SD.Tools.Algorithmia/1.4.0
+    DownloadCount: 67927
+    Authors: Frans Bouma
+    Icon: {fileID: 0}
+    ProjectUrl: https://solutionsdesign.github.io/Algorithmia/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: Heap.NET
+    Version: 1.0.0
+    Title: Heap.NET
+    Description: Provides efficient, generic heap data structures.
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: https://github.com/zlstringham/dotnet-heap/blob/master/LICENSE
+    DownloadUrl: https://www.nuget.org/api/v2/package/Heap.NET/1.0.0
+    DownloadCount: 674
+    Authors: Zac Stringham
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/zlstringham/dotnet-heap/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: TinyHeap
+    Version: 1.0.0
+    Title: TinyHeap
+    Description: Just a generic heap/priority queue in under 80 lines.
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: 
+    DownloadUrl: https://www.nuget.org/api/v2/package/TinyHeap/1.0.0
+    DownloadCount: 474
+    Authors: Guad
+    Icon: {fileID: 0}
+    ProjectUrl: 
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: EricForce.BinaryHeap
+    Version: 1.0.0
+    Title: EricForce.BinaryHeap
+    Description: An implementation of the binary heap algorithm.
+    Summary: 
+    ReleaseNotes: First release
+    LicenseUrl: https://gitlab.com/EricForce/BinaryHeap/blob/master/LICENSE
+    DownloadUrl: https://www.nuget.org/api/v2/package/EricForce.BinaryHeap/1.0.0
+    DownloadCount: 715
+    Authors: Eric Force
+    Icon: {fileID: 0}
+    ProjectUrl: https://gitlab.com/EricForce/BinaryHeap
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: heap.TypeScript.DefinitelyTyped
+    Version: 0.0.2
+    Title: heap.TypeScript.DefinitelyTyped
+    Description: 'TypeScript Definitions (d.ts) for heap. Generated based off the
+      DefinitelyTyped repository [git commit: b14601af3fb2ad72d5048e94188a569a1838fb9c].
+      http://github.com/DefinitelyTyped'
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: https://github.com/DefinitelyTyped/NugetAutomation/blob/master/LICENSE.MIT
+    DownloadUrl: https://www.nuget.org/api/v2/package/heap.TypeScript.DefinitelyTyped/0.0.2
+    DownloadCount: 1770
+    Authors: Jason Jarrett
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/DefinitelyTyped/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  updatePackages:
+  - Id: Microsoft.NETCore.Platforms
+    Version: 6.0.1
+    Title: Microsoft.NETCore.Platforms
+    Description: Provides runtime information required to resolve target framework,
+      platform, and runtime specific implementations of .NETCore packages.
+    Summary: 
+    ReleaseNotes: https://go.microsoft.com/fwlink/?LinkID=799421
+    LicenseUrl: https://licenses.nuget.org/MIT
+    DownloadUrl: https://www.nuget.org/api/v2/package/Microsoft.NETCore.Platforms/6.0.1
+    DownloadCount: 1607330569
+    Authors: Microsoft
+    Icon: {fileID: 0}
+    ProjectUrl: https://dot.net/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: NETStandard.Library
+    Version: 2.0.3
+    Title: NETStandard.Library
+    Description: "A set of standard .NET APIs that are prescribed to be used and
+      supported together. \n18a36291e48808fa7ef2d00a764ceb1ec95645a5 \nWhen using
+      NuGet 3.x this package requires at least version 3.4."
+    Summary: 
+    ReleaseNotes: https://go.microsoft.com/fwlink/?LinkID=799421
+    LicenseUrl: https://github.com/dotnet/standard/blob/master/LICENSE.TXT
+    DownloadUrl: https://www.nuget.org/api/v2/package/NETStandard.Library/2.0.3
+    DownloadCount: 704889007
+    Authors: Microsoft
+    Icon: {fileID: 0}
+    ProjectUrl: https://dot.net/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  numberToSkip: 0
+  defaultIcon: {fileID: 2800000, guid: eec19781926cd2248b7c9abfde8db555, type: 3}
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,10 +751,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 800
+    width: 782
     height: 884
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -441,7 +783,7 @@ MonoBehaviour:
   m_PosRight: {x: 0, y: 0}
   m_Scope: 0
   m_SplitterFlex: 0.2
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -470,7 +812,7 @@ MonoBehaviour:
   m_PosRight: {x: 0, y: 0}
   m_Scope: 1
   m_SplitterFlex: 0.2
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,7 +854,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -539,8 +881,8 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -54894
---- !u!114 &21
+  m_LastSelectedObjectID: 14950
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -565,7 +907,7 @@ MonoBehaviour:
     width: 1859
     height: 884
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &22
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -586,9 +928,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 978
-    width: 2956
-    height: 381
+    y: 1061
+    width: 3044
+    height: 298
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -603,36 +945,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Controllers/Vehicles
+    - Assets/Scripts/Algorithms
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Controllers/Vehicles
+  - Assets/Scripts/Algorithms
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Isaac\Documents\_games\CityBuilder\CityBuilder-Main
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 203}
-    m_SelectedIDs: 323e0000
-    m_LastClickedID: 15922
-    m_ExpandedIDs: 00000000f23d0000f43d0000f63d0000f83d0000fa3d0000fc3d0000fe3d0000003e0000023e0000043e000000ca9a3b
+    scrollPos: {x: 0, y: 234}
+    m_SelectedIDs: 7c3c0000
+    m_LastClickedID: 15484
+    m_ExpandedIDs: 000000001e3c0000203c0000223c0000243c0000263c0000283c00002a3c00002c3c00002e3c0000303c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Classes
-      m_OriginalName: Classes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 15920
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -646,7 +988,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f23d0000f43d0000f63d0000f83d0000fa3d0000fc3d0000fe3d0000003e0000023e0000043e0000
+    m_ExpandedIDs: 000000001e3c0000203c0000223c0000243c0000263c0000283c00002a3c00002c3c00002e3c0000303c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -702,7 +1044,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 311
---- !u!114 &23
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -722,21 +1064,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 4441
+    x: 4576
     y: 73
-    width: 678
+    width: 543
     height: 1286
   m_ViewDataDictionary: {fileID: 0}
-  m_ObjectsLockedBeforeSerialization:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_InstanceIDsLockedBeforeSerialization: d0c5ffff
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
     m_CachedPref: 160
     m_ControlHash: -371814159
@@ -745,9 +1079,9 @@ MonoBehaviour:
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
-    m_IsLocked: 1
+    m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &24
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -767,31 +1101,31 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 4075
+    x: 4242
     y: 73
-    width: 364
-    height: 884
+    width: 332
+    height: 967
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9252ffff
-      m_LastClickedID: -44398
-      m_ExpandedIDs: b452ffffecccffff38cdffffb6d7ffff2ed8ffffc6d8ffff1cdcffffe0dcffff4eedffff54fbffff943a0000f83b0000
+      m_SelectedIDs: 843a0000
+      m_LastClickedID: 14980
+      m_ExpandedIDs: 54fbffff723a00002e3b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Road Cross Road
-        m_OriginalName: Road Cross Road
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -39402
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -801,7 +1135,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: b248d0e5dba593547b47f9212a514c2b
---- !u!114 &25
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -821,10 +1155,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2196
+    x: 1709
     y: 73
-    width: 1877
-    height: 884
+    width: 2531
+    height: 967
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 285b135e480ea794eb1ec85edc1463a2
@@ -837,9 +1171,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.4104185, y: -12.620716, z: 0.6627455}
+    m_Target: {x: -0.21439695, y: 3.356073, z: 7.787518}
     speed: 2
-    m_Value: {x: 10.4104185, y: -12.620716, z: 0.6627455}
+    m_Value: {x: -0.21439695, y: 3.356073, z: 7.787518}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -886,13 +1220,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.17073956, y: 0.8166089, z: -0.30356774, w: 0.45989537}
+    m_Target: {x: 0.41170862, y: -0.4966011, z: 0.2884308, w: 0.7073478}
     speed: 2
-    m_Value: {x: 0.17031305, y: 0.8174371, z: -0.3038753, w: 0.4587481}
+    m_Value: {x: 0.4113475, y: -0.4977487, z: 0.28909865, w: 0.70672584}
   m_Size:
-    m_Target: 12.411399
+    m_Target: 2.8405824
     speed: 2
-    m_Value: 12.411399
+    m_Value: 2.8405824
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -917,7 +1251,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &26
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -937,10 +1271,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 783
+    x: 559
     y: 73
-    width: 1411
-    height: 884
+    width: 1148
+    height: 967
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -948,7 +1282,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1411, y: 863}
+  m_TargetSize: {x: 1148, y: 946}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -963,10 +1297,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -705.5
-    m_HBaseRangeMax: 705.5
-    m_VBaseRangeMin: -431.5
-    m_VBaseRangeMax: 431.5
+    m_HBaseRangeMin: -574
+    m_HBaseRangeMax: 574
+    m_VBaseRangeMin: -473
+    m_VBaseRangeMax: 473
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -984,29 +1318,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1411
-      height: 863
+      width: 1148
+      height: 946
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 705.5, y: 431.5}
+    m_Translation: {x: 574, y: 473}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -705.5
-      y: -431.5
-      width: 1411
-      height: 863
+      x: -574
+      y: -473
+      width: 1148
+      height: 946
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1411, y: 884}
+  m_LastWindowPixelSize: {x: 1148, y: 967}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &27
+--- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1026,12 +1360,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2957
-    y: 978
-    width: 1482
-    height: 381
+    x: 3045
+    y: 1061
+    width: 1529
+    height: 298
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &28
+--- !u!114 &29
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

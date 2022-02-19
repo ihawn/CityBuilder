@@ -294,6 +294,15 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="NugetForUnity">
+      <HintPath>Assets\NuGet\Editor\NugetForUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="C5">
+      <HintPath>Assets\Packages\C5.2.5.3\lib\netstandard1.0\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="FibonacciHeap">
+      <HintPath>Assets\Packages\FibonacciHeap.2.0.2\lib\netstandard1.0\FibonacciHeap.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>

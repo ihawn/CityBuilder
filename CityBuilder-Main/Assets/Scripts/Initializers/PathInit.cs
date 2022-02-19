@@ -55,6 +55,8 @@ public class PathInit : MonoBehaviour
             NodeGameObjects.AddRange(nodes1);
             //End join
         }
+
+        //Initialize Ids
         int id = 0;
         foreach(NodeProperties np in NodeGameObjects)
         {
@@ -62,15 +64,23 @@ public class PathInit : MonoBehaviour
             id++;
         }
 
+        //Initialize nodes
         foreach(NodeProperties np in NodeGameObjects)
         {
             Node n = new Node(np.gameObject);
             n.Id = np.Id;
-            n.ConnectedNodeIds = np.ConnectedNodeGameObjects
-                .Select(x => x.GetComponent<NodeProperties>().Id)
-                .ToList();
             GlobalSettings.GameManager.Nodes.Add(n);
             np.ThisNode = n;
+        }
+
+        //Initialize node weights
+        GameManager gm = GlobalSettings.GameManager;
+        foreach (Node node in GlobalSettings.GameManager.Nodes)
+        {
+            GlobalSettings.GameManager.Nodes[node.Id].EdgeWeights
+                = gm.Nodes[node.Id].ConnectedNodeIds
+                .Select(x => Vector3.Distance(gm.Nodes[x].Position, gm.Nodes[node.Id].Position))
+                .ToList();
         }
     }
 }
