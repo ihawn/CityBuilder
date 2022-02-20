@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Scene Objects")]
-    public PathInit PathInit;
-    public VehicleInit VehicleInit;
+    [Header("Central Objects")]
     public GlobalSettings GlobalSettings;
     public GameObject Paths;
     public PathCreatorController DebugMethods;
 
-    [Header("Vehicles")]
+    [Header("Initializers")]
+    public PathInit PathInit;
+    public VehicleInit VehicleInit;
+    public IntersectionInit IntersectionInit;
+
+    [Header("Vehicle Lists")]
     public List<Vehicle> Vehicles = new List<Vehicle>();
 
-    [Header("Nodes")]
+    [Header("Road Objects")]
+    public List<Intersection> Intersections = new List<Intersection>();
+
+    [Header("Pathfinding Lists")]
     public List<Node> Nodes = new List<Node>();
 
     void Awake()
@@ -26,6 +32,8 @@ public class GameManager : MonoBehaviour
     {
         PathInit.Init();
         VehicleInit.Init();
+        IntersectionInit.Init();
+        
     }
 
     void Update()

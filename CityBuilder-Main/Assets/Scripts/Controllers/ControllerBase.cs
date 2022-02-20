@@ -7,6 +7,7 @@ public static class ControllerBase
     public static void UpdateControllers()
     {
         UpdateVehicles();
+        UpdateIntersections();
     }
 
     static void UpdateVehicles()
@@ -14,6 +15,15 @@ public static class ControllerBase
         foreach (var vehicle in GlobalSettings.GameManager.Vehicles)
         {
             vehicle.VehicleController.FollowPath();
+            vehicle.VehicleController.UpdateSpeed();
+        }
+    }
+
+    static void UpdateIntersections()
+    {
+        foreach(var intersection in GlobalSettings.GameManager.Intersections)
+        {
+            intersection.IntersectionController.UpdateIntersection();
         }
     }
 }

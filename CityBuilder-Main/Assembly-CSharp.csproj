@@ -60,6 +60,7 @@
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\Scripts\Initializers\VehicleInit.cs" />
     <Compile Include="Assets\Scripts\Settings\ObjectSettings.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerBase.cs" />
     <Compile Include="Assets\Scripts\Controllers\Paths\PathCreatorController.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\Scripts\Controllers\Vehicles\VehicleController.cs" />
@@ -75,7 +76,9 @@
     <Compile Include="Assets\Scripts\BehaviorClassses\AgentsStatic\Cargo.cs" />
     <Compile Include="Assets\Scripts\BehaviorClassses\PathFinding\PathFollow.cs" />
     <Compile Include="Assets\Scripts\Algorithms\AStar.cs" />
-    <Compile Include="Assets\Scripts\Controllers\ControllerBase.cs" />
+    <Compile Include="Assets\Scripts\BehaviorClassses\RoadClasses\Intersection.cs" />
+    <Compile Include="Assets\Scripts\Initializers\IntersectionInit.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Vehicles\IntersectionController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Packages\Microsoft.NETCore.Platforms.1.1.0\ThirdPartyNotices.txt" />
