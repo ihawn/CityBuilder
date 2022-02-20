@@ -18,9 +18,9 @@ public class Vehicle
     public Vehicle(
         VehicleType type,
         GameObject obj,
-        PathFollow pathFollow, 
-        int? capacity = null, 
-        List<Cargo> cargoList = null, 
+        PathFollow pathFollow,
+        int? capacity = null,
+        List<Cargo> cargoList = null,
         Person driver = null,
         List<Person> passengers = null)
     {
@@ -28,6 +28,7 @@ public class Vehicle
         ObjectSettings = new ObjectSettings(obj);
         VehicleController = obj.GetComponent<VehicleController>();
         PathFollow = pathFollow;
+        
 
         if (cargoList != null)
             CargoList = cargoList;
@@ -43,10 +44,7 @@ public class Vehicle
         {
             case VehicleType.car:
                 VehicleType = VehicleType.car;
-                if (capacity != null)
-                    Capacity = capacity.Value;
-                else
-                    Capacity = GlobalSettings.CarCapacity;
+                Capacity = capacity == null ? GlobalSettings.CarCapacity : capacity.Value;
                 break;
         }
     }

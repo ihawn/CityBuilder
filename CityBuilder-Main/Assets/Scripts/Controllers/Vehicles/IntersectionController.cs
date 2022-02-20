@@ -8,6 +8,7 @@ public class IntersectionController : MonoBehaviour
     public IntersectionState State;
     public float cycleTimer;
     public float nextTime;
+    float slowZoneOffset = -2;
     public IDictionary<IntersectionState, Color> LightColors = new Dictionary<IntersectionState, Color>()
     {
         { IntersectionState.straight, Color.green },
@@ -16,7 +17,7 @@ public class IntersectionController : MonoBehaviour
         { IntersectionState.left, Color.cyan }
     };
 
-    public void UpdateIntersections()
+    public void UpdateIntersection()
     {
         Intersection.CycleTimer += Time.deltaTime;
         State = Intersection.State;
@@ -35,7 +36,50 @@ public class IntersectionController : MonoBehaviour
             Intersection.NextTime = Intersection.Timings[Intersection.State];
             Intersection.CycleTimer = 0;
 
+            SetIntersectionState(Intersection.State);
+
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", LightColors[Intersection.State]);
+        }
+    }
+
+    public void SetIntersectionState(IntersectionState state)
+    {
+        switch (state)
+        {
+            case IntersectionState.straight:
+                SetIntersectionChildState(false);
+                break;
+
+            case IntersectionState.left:
+                SetIntersectionChildState(false);
+                break;
+
+            case IntersectionState.right:
+                SetIntersectionChildState(true);
+                break;
+
+            case IntersectionState.orthogonal:
+                SetIntersectionChildState(true);
+                break;
+        }
+    }
+
+    void SetIntersectionChildState(bool b)
+    {
+        float activeHeight = slowZoneOffset;
+        float inactiveHeight = 10;
+
+        int i = 0;
+        foreach(Transform t in transform)
+        {
+            if(t.name.ToLower().Contains("triggerzone"))
+            {
+                Vector3 pos;
+                if (i == 0 || i == 1) { pos = new Vector3(t.localPosition.x, b ? activeHeight : inactiveHeight, t.localPosition.z); }
+                else { pos = new Vector3(t.localPosition.x, !b ? activeHeight : inactiveHeight, t.localPosition.z); }
+                t.localPosition = pos;
+                i++;
+            }
         }
     }
 }

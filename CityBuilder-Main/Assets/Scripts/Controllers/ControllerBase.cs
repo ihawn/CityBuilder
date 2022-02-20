@@ -15,6 +15,7 @@ public static class ControllerBase
         foreach (var vehicle in GlobalSettings.GameManager.Vehicles)
         {
             vehicle.VehicleController.FollowPath();
+            vehicle.VehicleController.UpdateSpeed();
         }
     }
 
@@ -22,7 +23,7 @@ public static class ControllerBase
     {
         foreach(var intersection in GlobalSettings.GameManager.Intersections)
         {
-            intersection.IntersectionController.UpdateIntersections();
+            intersection.IntersectionController.UpdateIntersection();
         }
     }
 }

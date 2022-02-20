@@ -13,6 +13,10 @@ public class GlobalSettings : MonoBehaviour
     [Header("Car Parameters")]
     public int carCapactiy = 4;
     public static int CarCapacity;
+    public float slowAccelerationVehicle = -3f;
+    public static float SlowAccelerationVehicle;
+    public float speedAccelerationVehicle = 2f;
+    public static float SpeedAccelerationVehicle;
 
     [Header("Road Parameters")]
     public float speedLimit = 5;
@@ -35,5 +39,7 @@ public class GlobalSettings : MonoBehaviour
         LaneOffset = laneOffset;
         GameManager = gameManager;
         IntersectionTimings = intersectionTimings;
+        SlowAccelerationVehicle = slowAccelerationVehicle;
+        SpeedAccelerationVehicle = speedAccelerationVehicle;
     }
 }
