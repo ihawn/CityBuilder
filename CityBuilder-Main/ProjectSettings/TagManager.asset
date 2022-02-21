@@ -8,6 +8,7 @@ TagManager:
   - FourWay
   - ThreeWay
   - SlowZone
+  - NodeSocketJoined
   layers:
   - Default
   - TransparentFX

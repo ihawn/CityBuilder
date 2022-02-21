@@ -33,6 +33,9 @@ Transform:
   - {fileID: 6167945451303626598}
   - {fileID: 4595919948363286544}
   - {fileID: 550238073454953089}
+  - {fileID: 7520023257083691693}
+  - {fileID: 7942445207995941310}
+  - {fileID: 1379541819329566568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -124,7 +127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2363006146167119321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.728, y: 0, z: 0.1}
+  m_LocalPosition: {x: 0.951, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 456242}
@@ -144,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConnectedNodeGameObjects:
   - {fileID: 4106644895547470056}
-  - {fileID: 7472777014852678708}
+  - {fileID: 4244769589115915031}
   Id: 0
 --- !u!1 &4106644895547470056
 GameObject:
@@ -171,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4106644895547470056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.728, y: 0, z: 1.399}
+  m_LocalPosition: {x: 0.952, y: 0, z: 1.273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 456242}
@@ -189,9 +192,144 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 671f6a82e079f394e9bc1cd64b287750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedNodeGameObjects: []
+  Id: 0
+--- !u!1 &4244769589115915031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7520023257083691693}
+  - component: {fileID: 4912544911755713584}
+  m_Layer: 0
+  m_Name: node (3)
+  m_TagString: NodeSocket
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7520023257083691693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244769589115915031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.265, y: 0, z: 0.503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456242}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4912544911755713584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244769589115915031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671f6a82e079f394e9bc1cd64b287750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConnectedNodeGameObjects: []
+  Id: 0
+--- !u!1 &4505432681164038840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1379541819329566568}
+  - component: {fileID: 3997617884225303100}
+  m_Layer: 0
+  m_Name: node (5)
+  m_TagString: NodeSocket
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1379541819329566568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505432681164038840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.501, y: 0, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456242}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3997617884225303100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505432681164038840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671f6a82e079f394e9bc1cd64b287750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConnectedNodeGameObjects: []
+  Id: 0
+--- !u!1 &4893080120045844362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7942445207995941310}
+  - component: {fileID: 590100340498953289}
+  m_Layer: 0
+  m_Name: node (4)
+  m_TagString: NodeSocket
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7942445207995941310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893080120045844362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.559, y: 0, z: 1.273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456242}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &590100340498953289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893080120045844362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671f6a82e079f394e9bc1cd64b287750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   ConnectedNodeGameObjects:
-  - {fileID: 2363006146167119321}
-  - {fileID: 7472777014852678708}
+  - {fileID: 4505432681164038840}
+  - {fileID: 4244769589115915031}
   Id: 0
 --- !u!1 &7472777014852678708
 GameObject:
@@ -218,7 +356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7472777014852678708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.378, y: 0, z: 0.749}
+  m_LocalPosition: {x: 1.265, y: 0, z: 0.993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 456242}
@@ -237,6 +375,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConnectedNodeGameObjects:
-  - {fileID: 2363006146167119321}
+  - {fileID: 4505432681164038840}
   - {fileID: 4106644895547470056}
   Id: 0

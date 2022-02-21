@@ -5219,7 +5219,7 @@ MonoBehaviour:
   slowAccelerationVehicle: -6
   speedAccelerationVehicle: 2
   speedLimit: 3
-  laneOffset: 0.23
+  laneOffset: 0
 --- !u!4 &1671357184
 Transform:
   m_ObjectHideFlags: 0
