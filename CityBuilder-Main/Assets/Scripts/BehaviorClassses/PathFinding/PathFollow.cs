@@ -18,29 +18,51 @@ public class PathFollow
     public float Acceleration { get; set; }
     public float SpeedAcceleration { get; set; }
     public float SlowAcceleration { get; set; }
+    public int? DestinationNodeId { get; set; }
+    public int StartNodeId { get; set; }
+    public List<Node> Path { get; set; }
 
-    public PathFollow(List<Node> nodes,
+    public PathFollow(
         PathType type,
+        int startNodeId,
         float? speedLimit = null,
         float? speedAcceleration = null,
-        float? slowAcceleration = null)
+        float? slowAcceleration = null,
+        int? destinationNodeId = null)
     {
-        DistanceTraveled = 0;
         Acceleration = 0;
 
-        List<Vector3> bezierPoints = nodes.Select(x => x.Position).ToList();
-        BezierPath path = new BezierPath(Vector3.zero, Vector3.zero, bezierPoints, false, PathSpace.xz);
-        PathCreator creator = GlobalSettings.GameManager.DebugMethods.DrawPath(path);
-        PathCreator = creator;
+        SetPath(startNodeId, destinationNodeId);
 
         switch (type)
         {
             case PathType.road:
-                Speed = GlobalSettings.SpeedLimit;
+                Speed = destinationNodeId == null ? 0 : GlobalSettings.SpeedLimit;
                 SpeedLimit = speedLimit == null ? GlobalSettings.SpeedLimit : speedLimit.Value;
                 SpeedAcceleration = speedAcceleration == null ? GlobalSettings.SpeedAccelerationVehicle : speedAcceleration.Value;
                 SlowAcceleration = slowAcceleration == null ? GlobalSettings.SlowAccelerationVehicle : slowAcceleration.Value;
                 break;
+        }
+    }
+
+    public void SetPath(int startNodeId, int? endNodeId)
+    {
+        var nodes = GlobalSettings.GameManager.Nodes;
+
+        DistanceTraveled = 0;
+        StartNodeId = startNodeId;
+        DestinationNodeId = endNodeId;
+        Path = endNodeId == null ? null : AStar.GetShortestPath(nodes[startNodeId], nodes[endNodeId.Value], nodes);
+
+        if (Path != null)
+        {
+            List<Vector3> bezierPoints = Path.Select(x => x.Position).ToList();
+            BezierPath path = new BezierPath(Vector3.zero, Vector3.zero, bezierPoints, false, PathSpace.xz);
+            PathCreator creator = GlobalSettings.GameManager.DebugMethods.DrawPath(path);
+
+            if (PathCreator != null)
+                GameObject.Destroy(PathCreator);
+            PathCreator = creator;
         }
     }
 }
