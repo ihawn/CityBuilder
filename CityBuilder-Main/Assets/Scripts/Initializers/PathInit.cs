@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using PathCreation;
 
 public class PathInit : MonoBehaviour
 {
@@ -74,6 +75,7 @@ public class PathInit : MonoBehaviour
         }
 
         GameObject go = new GameObject("Node Transforms");
+
         //Initialize node weights
         GameManager gm = GlobalSettings.GameManager;
         foreach (Node node in GlobalSettings.GameManager.Nodes)
@@ -82,7 +84,7 @@ public class PathInit : MonoBehaviour
                 = gm.Nodes[node.Id].ConnectedNodeIds
                 .Select(x => Vector3.Distance(gm.Nodes[x].Position, gm.Nodes[node.Id].Position))
                 .ToList();
-            
+
             GameObject go2 = new GameObject("node" + node.Id);
             go2.transform.position = node.Position;
             go2.AddComponent<SphereCollider>();

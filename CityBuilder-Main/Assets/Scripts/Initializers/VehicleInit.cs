@@ -14,7 +14,8 @@ public class VehicleInit : MonoBehaviour
         foreach (GameObject g in VehicleGameObjects)
         {
             List<Node> nodeCopy = new List<Node>(gm.Nodes);
-            List<Node> path = AStar.GetShortestPath(nodeCopy[62], nodeCopy[100], nodeCopy);
+            List<Node> path = AStar.GetShortestPath(nodeCopy[0], nodeCopy[10], nodeCopy);
+            Debug.Log(path.Count);
             PathFollow pf = new PathFollow(path, PathType.road);
             Vehicle v = new Vehicle(VehicleType.car, g, pf);
             var vc = g.GetComponent<VehicleController>();
