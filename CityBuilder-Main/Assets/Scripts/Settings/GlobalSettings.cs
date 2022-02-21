@@ -6,6 +6,9 @@ using PathCreation;
 [System.Serializable]
 public class GlobalSettings : MonoBehaviour
 {
+    [Header("Global Engine Parameters")]
+    public float timescale = 1;
+
     [Header("Object References")]
     public GameManager gameManager;
     public static GameManager GameManager;
@@ -41,5 +44,6 @@ public class GlobalSettings : MonoBehaviour
         IntersectionTimings = intersectionTimings;
         SlowAccelerationVehicle = slowAccelerationVehicle;
         SpeedAccelerationVehicle = speedAccelerationVehicle;
+        Time.timeScale = timescale;
     }
 }
