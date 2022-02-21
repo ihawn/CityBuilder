@@ -45,6 +45,17 @@ public static class AStar
             }
         }
 
+        path.Add(start);
+
+        foreach (Node n in allNodes)
+        {
+            n.Open = false;
+            n.Closed = false;
+            n.F = 0;
+            n.G = 0;
+            n.H = 0;
+        }
+
         return path;
     }
 }

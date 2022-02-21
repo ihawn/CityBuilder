@@ -102,7 +102,7 @@ public class PathInit : MonoBehaviour
             np.ThisNode = n;
         }
 
-        //GameObject go = new GameObject("Node Transforms");
+        
 
         
         GameManager gm = GlobalSettings.GameManager;
@@ -115,11 +115,13 @@ public class PathInit : MonoBehaviour
                 .Select(x => Vector3.Distance(gm.Nodes[x].Position, gm.Nodes[node.Id].Position))
                 .ToList();
 
+        }
 
-            //Enable to debug connected node paths (slow)
-
-
-            /*GameObject go2 = new GameObject("node" + node.Id);
+        //Enable to debug connected node paths (slow)
+        /*GameObject go = new GameObject("Node Transforms");
+        foreach (Node n in gm.Nodes)
+        {
+            GameObject go2 = new GameObject("node" + node.Id);
             go2.transform.position = node.Position;
             go2.AddComponent<SphereCollider>();
             go2.GetComponent<SphereCollider>().radius = 0.1f;
@@ -134,7 +136,7 @@ public class PathInit : MonoBehaviour
                 BezierPath bp = new BezierPath(Vector3.zero, Vector3.zero, new List<Vector3>() { v1, ave, v2 });
                 go3.GetComponent<PathCreator>().bezierPath = bp;
                 go3.transform.parent = go2.transform;
-            }*/
-        }
+            }
+        }*/
     }
 }

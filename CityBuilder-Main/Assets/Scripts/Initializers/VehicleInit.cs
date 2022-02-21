@@ -14,11 +14,11 @@ public class VehicleInit : MonoBehaviour
         foreach (GameObject g in VehicleGameObjects)
         {
             List<Node> nodeCopy = new List<Node>(gm.Nodes);
-            List<Node> path = AStar.GetShortestPath(nodeCopy[210], nodeCopy[204], nodeCopy);
-            Debug.Log(path.Count);
-            PathFollow pf = new PathFollow(path, PathType.road);
+            PathFollow pf = new PathFollow(PathType.road, 204, destinationNodeId: 93);
+            pf.FollowerObject = g;
             Vehicle v = new Vehicle(VehicleType.car, g, pf);
             var vc = g.GetComponent<VehicleController>();
+            g.transform.position = gm.Nodes[204].Position;
             vc.vehicle = v;
             vc.id = id;
             vc.pf = v.PathFollow;
