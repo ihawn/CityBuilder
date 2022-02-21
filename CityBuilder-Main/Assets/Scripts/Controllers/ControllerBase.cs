@@ -15,7 +15,7 @@ public static class ControllerBase
         foreach (var vehicle in GlobalSettings.GameManager.Vehicles)
         {
             vehicle.VehicleController.FollowPath();
-            vehicle.VehicleController.UpdateSpeed();
+            vehicle.VehicleController.UpdateTravelParameters();
         }
     }
 
