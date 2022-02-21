@@ -73,7 +73,7 @@ public class PathFollow
         bool b = dist + offset > PathCreator.path.length;
         var n1 = PathCreator.path.GetNormalAtDistance(dist + (b ? 0 : offset));
         var n2 = PathCreator.path.GetNormalAtDistance(dist - (b ? offset : 0));
-        return Mathf.Clamp(1 - Vector3.Angle(n1, n2)/45, 0.2f, 1f);
+        return Mathf.Clamp(1 - Vector3.Angle(n1, n2)/45, 0.4f, 1f);
     }
 }
 
