@@ -9,6 +9,7 @@ public class VehicleController : MonoBehaviour
     public Vehicle vehicle;
     public PathFollow pf;
     public int id;
+    public float curveMagnitude; //Multiplier which will make agent travel slower the tighter the turn is
 
     public void FollowPath()
     {
@@ -23,11 +24,14 @@ public class VehicleController : MonoBehaviour
             CheckForDestination(path);
         }
     }
-    public void UpdateSpeed()
+    public void UpdateTravelParameters()
     {
-        pf.Speed += pf.Acceleration * Time.deltaTime;
+        curveMagnitude = pf.GetTurnTightnessAtDistance(pf.DistanceTraveled);
+
+        pf.Speed += pf.Acceleration * Time.deltaTime * curveMagnitude;
         pf.Speed = Mathf.Clamp(pf.Speed, 0, pf.SpeedLimit);
     }
+
 
     void CheckForDestination(VertexPath path)
     {

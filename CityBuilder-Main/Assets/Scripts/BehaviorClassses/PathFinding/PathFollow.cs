@@ -65,6 +65,16 @@ public class PathFollow
             PathCreator = creator;
         }
     }
+
+    //Returns a float between 0, 1 | 1 = straight road, 0 = no straightness
+    public float GetTurnTightnessAtDistance(float dist)
+    {
+        float offset = 0.5f;
+        bool b = dist + offset > PathCreator.path.length;
+        var n1 = PathCreator.path.GetNormalAtDistance(dist + (b ? 0 : offset));
+        var n2 = PathCreator.path.GetNormalAtDistance(dist - (b ? offset : 0));
+        return Mathf.Clamp(1 - Vector3.Angle(n1, n2)/45, 0.4f, 1f);
+    }
 }
 
 public enum PathType
