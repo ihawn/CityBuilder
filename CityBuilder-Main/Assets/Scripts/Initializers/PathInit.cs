@@ -102,25 +102,29 @@ public class PathInit : MonoBehaviour
             np.ThisNode = n;
         }
 
-        GameObject go = new GameObject("Node Transforms");
+        //GameObject go = new GameObject("Node Transforms");
+
+        
+        GameManager gm = GlobalSettings.GameManager;
 
         //Initialize node weights
-        GameManager gm = GlobalSettings.GameManager;
-        foreach (Node node in GlobalSettings.GameManager.Nodes)
+        foreach (Node node in gm.Nodes)
         {
             GlobalSettings.GameManager.Nodes[node.Id].EdgeWeights
                 = gm.Nodes[node.Id].ConnectedNodeIds
                 .Select(x => Vector3.Distance(gm.Nodes[x].Position, gm.Nodes[node.Id].Position))
                 .ToList();
 
-            GameObject go2 = new GameObject("node" + node.Id);
+
+            //Enable to debug connected node paths (slow)
+
+
+            /*GameObject go2 = new GameObject("node" + node.Id);
             go2.transform.position = node.Position;
             go2.AddComponent<SphereCollider>();
             go2.GetComponent<SphereCollider>().radius = 0.1f;
-            go2.transform.parent = go.transform;
-
-            //Enable to debug connected node paths (slow)
-            /*foreach(int k in node.ConnectedNodeIds)
+            go2.transform.parent = go.transform;     
+            foreach(int k in node.ConnectedNodeIds)
             {
                 GameObject go3 = new GameObject("connected");
                 go3.AddComponent<PathCreator>();
