@@ -4258,6 +4258,7 @@ MonoBehaviour:
   IntersectionInit: {fileID: 495406833}
   Vehicles: []
   Nodes: []
+  PanAndZoom: {fileID: 635543152}
 --- !u!4 &1158307581
 Transform:
   m_ObjectHideFlags: 0
