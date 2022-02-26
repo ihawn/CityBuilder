@@ -5,15 +5,15 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637810770051840940
-    m_Hash: 2745726591
+      ticks: 637814386104947908
+    m_Hash: 2847977844
   m_LockFileStatus:
     m_FilePath: C:/Users/Isaac/Documents/_games/CityBuilder/CityBuilder-Main/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637810770057475487
+      ticks: 637814387633361075
     m_Hash: 975088223
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

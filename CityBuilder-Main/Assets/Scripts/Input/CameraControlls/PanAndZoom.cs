@@ -18,14 +18,14 @@ public class PanAndZoom : MonoBehaviour
     private CinemachineVirtualCamera virtualCamera;
     private Transform cameraTransform;
 
-    private void Awake()
+    public void Init()
     {
         inputProvider = GetComponent<CinemachineInputProvider>();
         virtualCamera = GetComponent<CinemachineVirtualCamera>();
         cameraTransform = virtualCamera.VirtualCameraGameObject.transform;
     }
 
-    private void Update()
+    public void UpdateCameraTransform()
     {
         float x = inputProvider.GetAxisValue(0);
         float y = inputProvider.GetAxisValue(1);

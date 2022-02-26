@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     [Header("Pathfinding Lists")]
     public List<Node> Nodes = new List<Node>();
 
+    [Header("Camera Objects")]
+    public PanAndZoom PanAndZoom;
+
     void Awake()
     {
         GlobalSettings.UpdateParameters();
@@ -33,12 +36,13 @@ public class GameManager : MonoBehaviour
         PathInit.Init();
         VehicleInit.Init();
         IntersectionInit.Init();
-        
+        PanAndZoom.Init();        
     }
 
     void Update()
     {
         GlobalSettings.UpdateParameters();
+        //PanAndZoom.UpdateCameraTransform();
         ControllerBase.UpdateControllers();
     }
 }
