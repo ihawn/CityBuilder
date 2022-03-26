@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: -5088655730683855198}
   - component: {fileID: 8670114385393458768}
   m_Layer: 0
-  m_Name: ute_empty_seperate_yellow
+  m_Name: ute_empty_seperate_yellow 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

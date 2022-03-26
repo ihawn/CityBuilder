@@ -10,6 +10,8 @@ public class VehicleController : MonoBehaviour
     public PathFollow pf;
     public int id;
     public float curveMagnitude; //Multiplier which will make agent travel slower the tighter the turn is
+    public float distanceFromLastSlowdownTrail;
+    public int slowzoneObjectsCount = 0;
 
     public void FollowPath()
     {
@@ -21,9 +23,12 @@ public class VehicleController : MonoBehaviour
             transform.position = path.GetPointAtDistance(pf.DistanceTraveled) + offset;
             transform.rotation = path.GetRotationAtDistance(pf.DistanceTraveled) * Quaternion.Euler(pf.Forwards ? 180 : 0, 0, 90);
 
+            UpdateSlowdownTrail();
+            UpdateAcceleration();
             CheckForDestination(path);
         }
     }
+
     public void UpdateTravelParameters()
     {
         curveMagnitude = pf.GetTurnTightnessAtDistance(pf.DistanceTraveled);
@@ -32,6 +37,30 @@ public class VehicleController : MonoBehaviour
         pf.Speed = Mathf.Clamp(pf.Speed, 0, pf.SpeedLimit);
     }
 
+    void UpdateSlowdownTrail()
+    {
+        distanceFromLastSlowdownTrail += pf.Speed * Time.deltaTime;
+        if (distanceFromLastSlowdownTrail >= GlobalSettings.SlowdownTrailDropOffset)
+        {
+            distanceFromLastSlowdownTrail = 0;
+            MakeSlowdownTrail();
+        }
+    }
+
+    void MakeSlowdownTrail()
+    {
+        PoolingAgent pa = vehicle.PoolingAgents["SlowdownPooler"];
+        GameObject slowdownObject = pa.GetPooledObject();
+        slowdownObject.transform.position = transform.position -
+            transform.forward * 2 * GlobalSettings.SlowdownTrailDropOffset * (pf.Forwards ? 1 : -1);
+
+        slowdownObject.SetActive(true);
+
+        DestroyAfterDistanceFromObject des = slowdownObject.GetComponent<DestroyAfterDistanceFromObject>();
+        des.obj = gameObject;
+        des.distance = GlobalSettings.SlowdownTrailDropOffset*5;
+        des.deactivate = true;
+    }
 
     void CheckForDestination(VertexPath path)
     {
@@ -58,14 +87,38 @@ public class VehicleController : MonoBehaviour
         pf.DestinationNodeId = nodeId;
     }
 
+    void UpdateAcceleration()
+    {
+        slowzoneObjectsCount = Mathf.Max(slowzoneObjectsCount, 0);
+        if(slowzoneObjectsCount == 0)
+        {
+            pf.Acceleration = pf.SpeedAcceleration;
+            pf.Slowing = false;
+        }
+        else
+        {
+            if(vehicle.Obstacle == null)
+                pf.Acceleration = pf.SlowAcceleration;
+            else
+            {
+                float dist = Vector3.Distance(vehicle.Obstacle.transform.position, transform.position);
+                pf.Acceleration = pf.SlowAcceleration * GlobalSettings.StartSlowdownThreshold / Mathf.Max(Mathf.Abs(dist - GlobalSettings.StartSlowdownThreshold), 0.01f);
+            }
+            pf.Slowing = true;
+        }
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         switch(other.tag)
         {
             case "SlowZone":
-                pf.Acceleration = pf.SlowAcceleration;
-                pf.Slowing = false;
+                slowzoneObjectsCount++;
+                break;
+            case "ObstacleSlowZone":
+                slowzoneObjectsCount++;
+                vehicle.Obstacle = other.GetComponent<DestroyAfterDistanceFromObject>().obj;
                 break;
         }
     }
@@ -75,8 +128,11 @@ public class VehicleController : MonoBehaviour
         switch (other.tag)
         {
             case "SlowZone":
-                pf.Acceleration = pf.SpeedAcceleration;
-                pf.Slowing = true;
+                slowzoneObjectsCount--;
+                break;
+            case "ObstacleSlowZone":
+                slowzoneObjectsCount--;
+                vehicle.Obstacle = null;
                 break;
         }
     }

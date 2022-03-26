@@ -1,0 +1,743 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.6f1 (8a2143876886) revision 9052483'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 18363.1556; Version 1909; 64bit' Language: 'en' Physical Memory: 65450 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Isaac/Documents/_games/CityBuilder/CityBuilder-Main
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50721
+Successfully changed project path to: C:/Users/Isaac/Documents/_games/CityBuilder/CityBuilder-Main
+C:/Users/Isaac/Documents/_games/CityBuilder/CityBuilder-Main
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 36.89 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.6f1 (8a2143876886)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Isaac/Documents/_games/CityBuilder/CityBuilder-Main/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 Ti (ID=0x2208)
+    Vendor:   
+    VRAM:     12108 MB
+    Driver:   30.0.14.7168
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001538 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.18 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.351 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001797 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 28.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+DisplayProgressbar: Restoring NuGet Packages
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.445 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1719 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.1 MB.
+System memory in use after: 87.2 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2164.
+Total: 1.594800 ms (FindLiveObjects: 0.166600 ms CreateObjectMapping: 0.074600 ms MarkObjects: 1.299200 ms  DeleteObjects: 0.053800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/van_mesh_red 2.prefab
+  artifactKey: Guid(57235d5efea4a444cb3f4fa468908f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/van_mesh_red 2.prefab using Guid(57235d5efea4a444cb3f4fa468908f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe4982f3c891abcdb1777603b664a99') in 0.077173 seconds
+  Import took 0.079372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/Vehicle_Boat_03.prefab
+  artifactKey: Guid(995ba215d717b274ab23c457b54a0ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/Vehicle_Boat_03.prefab using Guid(995ba215d717b274ab23c457b54a0ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '059175437751c53a8f228d44de3b54ed') in 0.011389 seconds
+  Import took 0.013591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/car_green 2.prefab
+  artifactKey: Guid(c83e2514066009f44b276525661ec45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/car_green 2.prefab using Guid(c83e2514066009f44b276525661ec45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b516bc86647a4b5a90902d5b54066da6') in 0.009113 seconds
+  Import took 0.011271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/van_mesh_blue 2.prefab
+  artifactKey: Guid(31b014abf1b70d24db64fe10d900f73c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/van_mesh_blue 2.prefab using Guid(31b014abf1b70d24db64fe10d900f73c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1aeb310891f55d4a2132a010d20a231') in 0.007657 seconds
+  Import took 0.009935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/bus_blue.prefab
+  artifactKey: Guid(81de690e0bb3130439ed3ffedbd27be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/bus_blue.prefab using Guid(81de690e0bb3130439ed3ffedbd27be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '134b19856091850c9d4c9f14dd462aca') in 0.007964 seconds
+  Import took 0.010135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/fire_truck_mesh 1.prefab
+  artifactKey: Guid(cf6cd23ac9db96044b89f37c3883ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/fire_truck_mesh 1.prefab using Guid(cf6cd23ac9db96044b89f37c3883ddb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee768270ca94b78db67a90735d8eeaf') in 0.007498 seconds
+  Import took 0.009584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/rubbish_truck_seperate_mesh 2.prefab
+  artifactKey: Guid(d02258275cfd6a74ebf69d3a6c2c4559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/rubbish_truck_seperate_mesh 2.prefab using Guid(d02258275cfd6a74ebf69d3a6c2c4559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f56c79b3ae62617c3a18019512f40fc') in 0.016386 seconds
+  Import took 0.018649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/van_mesh_green 2.prefab
+  artifactKey: Guid(b0129afedc143fa4d83aea20de3d5b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/van_mesh_green 2.prefab using Guid(b0129afedc143fa4d83aea20de3d5b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48d167da821d52fb3e1f11ae09b80efa') in 0.008477 seconds
+  Import took 0.010786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/Vehicle_Boat_01.prefab
+  artifactKey: Guid(9427ad0b999d0784fa3a660535722f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/Vehicle_Boat_01.prefab using Guid(9427ad0b999d0784fa3a660535722f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3f15590ab90e5e83a2120cbf97b94e') in 0.007679 seconds
+  Import took 0.009794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_empty_seperate_yellow 2.prefab
+  artifactKey: Guid(bce1484ed69cb6540aab8bbf760ce204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_empty_seperate_yellow 2.prefab using Guid(bce1484ed69cb6540aab8bbf760ce204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2526f0ebf8bf3dc7c876ec8026586fff') in 0.007918 seconds
+  Import took 0.010167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_empty_red 2.prefab
+  artifactKey: Guid(77c41e0f74f69ca4b90fe42dafe75a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_empty_red 2.prefab using Guid(77c41e0f74f69ca4b90fe42dafe75a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21c79e47aaf306f4293dbf8d51c42292') in 0.009100 seconds
+  Import took 0.011396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/taxi_mesh 2.prefab
+  artifactKey: Guid(c9a303ba062076a4ea82597dd6aa3643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/taxi_mesh 2.prefab using Guid(c9a303ba062076a4ea82597dd6aa3643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73218d27106a3f5647dc5d8c716a764b') in 0.008984 seconds
+  Import took 0.011515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/car_green 1.prefab
+  artifactKey: Guid(7cd22903c7425bb439affbe540e40ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/car_green 1.prefab using Guid(7cd22903c7425bb439affbe540e40ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d6ff405bbfa6bde7b51bbb2a37cdd56') in 0.008545 seconds
+  Import took 0.011005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_empty_blue 2.prefab
+  artifactKey: Guid(48646e9de817b574db3195cb9ecdf5db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_empty_blue 2.prefab using Guid(48646e9de817b574db3195cb9ecdf5db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c5f574a1b6cc191b37301521b92e0f4') in 0.011083 seconds
+  Import took 0.013200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ambo_mesh.prefab
+  artifactKey: Guid(76c07dd6050c1274e957542c913d7907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ambo_mesh.prefab using Guid(76c07dd6050c1274e957542c913d7907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b09c42f18d6229187d0340cb896a88') in 0.008064 seconds
+  Import took 0.010455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/bus_brown.prefab
+  artifactKey: Guid(aeccb9afd2c5d0a49806a3a543b169d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/bus_brown.prefab using Guid(aeccb9afd2c5d0a49806a3a543b169d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab6841b56eef68589cf82b782eaf8ae7') in 0.007662 seconds
+  Import took 0.009939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/bus_grey.prefab
+  artifactKey: Guid(11d3990ed7e319145b8c9afecab8d244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/bus_grey.prefab using Guid(11d3990ed7e319145b8c9afecab8d244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40416dfbf13fad1aff0d1eac53fc7cea') in 0.007122 seconds
+  Import took 0.009305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/cop_mesh 2.prefab
+  artifactKey: Guid(1c012af345e5d254bbd8c8208707a714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/cop_mesh 2.prefab using Guid(1c012af345e5d254bbd8c8208707a714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2887f5ab80ab20a60cd312aef219799c') in 0.007206 seconds
+  Import took 0.009407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_mesh_yellow 2.prefab
+  artifactKey: Guid(1380211fd2d9cdf4aa49a6117fb842e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_mesh_yellow 2.prefab using Guid(1380211fd2d9cdf4aa49a6117fb842e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51d0b2b3146c1d6022f4bf65679a6a1f') in 0.007252 seconds
+  Import took 0.009375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_mesh_blue 2.prefab
+  artifactKey: Guid(534e7147ee0f94648b95415cc7b51289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_mesh_blue 2.prefab using Guid(534e7147ee0f94648b95415cc7b51289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '316ab40d84d4269555d60f33abd6873b') in 0.008138 seconds
+  Import took 0.010595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_mesh_red 2.prefab
+  artifactKey: Guid(47cb641e185e2f246af0337fe57bd5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/ute_mesh_red 2.prefab using Guid(47cb641e185e2f246af0337fe57bd5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c29fa7bdc190105dd3b301654485b81') in 0.007159 seconds
+  Import took 0.009308 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/Vehicle_Boat_02.prefab
+  artifactKey: Guid(d7fb244e8d740c548a179b94501b50f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/Vehicle_Boat_02.prefab using Guid(d7fb244e8d740c548a179b94501b50f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb4cf936be8f96da47c469f3d4285db9') in 0.007330 seconds
+  Import took 0.009640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/car_red 2.prefab
+  artifactKey: Guid(7c1115b5c6e170c41b1d9740b967f613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles/car_red 2.prefab using Guid(7c1115b5c6e170c41b1d9740b967f613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '134e8b2debcd7b9210f0103ee2b0b3e0') in 0.014049 seconds
+  Import took 0.016229 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001744 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.201 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.5 MB.
+System memory in use after: 93.6 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2177.
+Total: 1.457500 ms (FindLiveObjects: 0.148000 ms CreateObjectMapping: 0.048700 ms MarkObjects: 1.221500 ms  DeleteObjects: 0.038700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 116.919768 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props
+  artifactKey: Guid(1d7d53a0809078a429ac31f4f3e11304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props using Guid(1d7d53a0809078a429ac31f4f3e11304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f824e4b47ebad0d6dc9055040ad3c671') in 0.006105 seconds
+  Import took 0.008319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008272 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props
+  artifactKey: Guid(1d7d53a0809078a429ac31f4f3e11304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props using Guid(1d7d53a0809078a429ac31f4f3e11304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f824e4b47ebad0d6dc9055040ad3c671') in 0.001564 seconds
+  Import took 0.003626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.236690 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Aerial_mesh.prefab
+  artifactKey: Guid(c691257436ab8b94c82c2a977d632162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Aerial_mesh.prefab using Guid(c691257436ab8b94c82c2a977d632162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e8df67b121107129185201ddef229d4') in 0.046486 seconds
+  Import took 0.048748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/bush_small_mesh.prefab
+  artifactKey: Guid(b65b99031ee1bc4449bf81590c840ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/bush_small_mesh.prefab using Guid(b65b99031ee1bc4449bf81590c840ddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf9efebf5b40ba30b27ccfdbdaf3539') in 0.015570 seconds
+  Import took 0.017614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/memorial_mesh.prefab
+  artifactKey: Guid(1a373d7351fe19a419a3e1f77cd9a147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/memorial_mesh.prefab using Guid(1a373d7351fe19a419a3e1f77cd9a147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e813e2b8c6cfa5de370d74d978cfacf1') in 0.010071 seconds
+  Import took 0.012051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Beachseat_02.prefab
+  artifactKey: Guid(8d9cdeea2b169ec4fb33012b49924463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Beachseat_02.prefab using Guid(8d9cdeea2b169ec4fb33012b49924463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a7843e85fc11a7a07d630af2de2d9b1') in 0.011049 seconds
+  Import took 0.013076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_TirePile.prefab
+  artifactKey: Guid(847f05299e763944fbcb918bbeb91f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_TirePile.prefab using Guid(847f05299e763944fbcb918bbeb91f81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f93548ee6a3e02c2bfc19e379ae76c9f') in 0.010734 seconds
+  Import took 0.012883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Umbrella_02.prefab
+  artifactKey: Guid(82d3701155d02e04090b77a5a4e47369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Umbrella_02.prefab using Guid(82d3701155d02e04090b77a5a4e47369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffa9286e6507d4ee6abce0458a2166f') in 0.010453 seconds
+  Import took 0.012592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/dumpster_mesh.prefab
+  artifactKey: Guid(4e3b8318a9112f24d84095e1a4d96ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/dumpster_mesh.prefab using Guid(4e3b8318a9112f24d84095e1a4d96ae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfee816fe90e75152a4c40e31dfd8524') in 0.035500 seconds
+  Import took 0.037628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/hedge_mesh.prefab
+  artifactKey: Guid(a6c9b23e54b445f49b6249c416d43bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/hedge_mesh.prefab using Guid(a6c9b23e54b445f49b6249c416d43bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4da9d75d2215ed40dea6709bc8396a5') in 0.020199 seconds
+  Import took 0.022396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/lamp_mesh.prefab
+  artifactKey: Guid(5d50cf3ef635cb942a43009b33905c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/lamp_mesh.prefab using Guid(5d50cf3ef635cb942a43009b33905c3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858b518d4e5730fe4a7eeb25931a12bd') in 0.011018 seconds
+  Import took 0.012998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/dish_mesh.prefab
+  artifactKey: Guid(adbfe1162689d6740a831245c05cd47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/dish_mesh.prefab using Guid(adbfe1162689d6740a831245c05cd47f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a31d6d5e887788c9689261592ff25a07') in 0.011465 seconds
+  Import took 0.013721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/bush_large_mesh.prefab
+  artifactKey: Guid(501d25c7f0c923348813a11dae66cbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/bush_large_mesh.prefab using Guid(501d25c7f0c923348813a11dae66cbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09a05c9d5a40c1d5e35e6d940355f25a') in 0.010985 seconds
+  Import took 0.013056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/fence_short_mesh.prefab
+  artifactKey: Guid(fde22103a04c51c498ada21dfa352a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/fence_short_mesh.prefab using Guid(fde22103a04c51c498ada21dfa352a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '877d0361a8165a4eb9166193eb69f95b') in 0.010545 seconds
+  Import took 0.012638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/grave_large_mesh.prefab
+  artifactKey: Guid(b6d0daa4036bab644b201bb421a19889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/grave_large_mesh.prefab using Guid(b6d0daa4036bab644b201bb421a19889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615ab6d463e43c86bae3c41bf8da8240') in 0.108589 seconds
+  Import took 0.110628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/tree_large_mesh.prefab
+  artifactKey: Guid(0ccc03e88bfc20c46b4f5ea02f4da61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/tree_large_mesh.prefab using Guid(0ccc03e88bfc20c46b4f5ea02f4da61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba7e53fa971205cc61d2bcd1b5115192') in 0.010848 seconds
+  Import took 0.012856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/grass_square_mesh.prefab
+  artifactKey: Guid(ea729863e0ab2b942844148c09cd395a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/grass_square_mesh.prefab using Guid(ea729863e0ab2b942844148c09cd395a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3ddd32df690f74b547b003a10b466e') in 0.024828 seconds
+  Import took 0.026980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/path_straight_mesh.prefab
+  artifactKey: Guid(5583fa11c464c6e4584aa180d1ed2bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/path_straight_mesh.prefab using Guid(5583fa11c464c6e4584aa180d1ed2bbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad2218d54a19648a93168539d9b13b4') in 0.016760 seconds
+  Import took 0.018786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/flower_mesh.prefab
+  artifactKey: Guid(1d82ee77af9ee5c46bdba56204e622e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/flower_mesh.prefab using Guid(1d82ee77af9ee5c46bdba56204e622e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b924c23dc30ee0896539ce720fc3781e') in 0.016060 seconds
+  Import took 0.018218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Props_Buoy_01.prefab
+  artifactKey: Guid(c6221ed1b229e024e8f602a311d68f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Props_Buoy_01.prefab using Guid(c6221ed1b229e024e8f602a311d68f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c272ebe956101d0ddfdb16d9f6f5f16') in 0.011179 seconds
+  Import took 0.013167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Beachseat_01.prefab
+  artifactKey: Guid(44b9ead1b0029ec4d8cffa009c4b0702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Beachseat_01.prefab using Guid(44b9ead1b0029ec4d8cffa009c4b0702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e38cf0301557d8c6cbc2e0495dc856f') in 0.011300 seconds
+  Import took 0.013276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Tree_01.prefab
+  artifactKey: Guid(ede154fab3d222444bee2634a7175825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Tree_01.prefab using Guid(ede154fab3d222444bee2634a7175825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8d65300dc8b9f1e56df44f9cc0ca9d2') in 0.011380 seconds
+  Import took 0.013602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Roadsign_03.prefab
+  artifactKey: Guid(8dce7dbdd30c01f49a3ff28478a7315e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Roadsign_03.prefab using Guid(8dce7dbdd30c01f49a3ff28478a7315e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be96d12429a689f73541f7bf2f07c23') in 0.011404 seconds
+  Import took 0.013417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Umbrella_01.prefab
+  artifactKey: Guid(65e19a3c5fb92df4cb0d99daca342cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Umbrella_01.prefab using Guid(65e19a3c5fb92df4cb0d99daca342cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93b6ad102d715d0d8cb78cdd33672a96') in 0.012049 seconds
+  Import took 0.014239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Roadsign_02.prefab
+  artifactKey: Guid(377e21b3c1c2cfb458ce46bfde9c791a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Roadsign_02.prefab using Guid(377e21b3c1c2cfb458ce46bfde9c791a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '864685f01b80cc8e1fb0ee7cfdb8b5bf') in 0.032960 seconds
+  Import took 0.035294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/flag_mesh.prefab
+  artifactKey: Guid(297d4f4601e25494e852277515e79e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/flag_mesh.prefab using Guid(297d4f4601e25494e852277515e79e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f29918fda52ac27eeb4f67bc1a2aeb') in 0.011546 seconds
+  Import took 0.013605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Roadsign_01.prefab
+  artifactKey: Guid(b0ae0fe2fed20c0408778e0f303dd613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Roadsign_01.prefab using Guid(b0ae0fe2fed20c0408778e0f303dd613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c77185e2cf22aa45f11b29c17f904689') in 0.010967 seconds
+  Import took 0.013039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000133 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/path_cross_mesh.prefab
+  artifactKey: Guid(2f9f24ad655335a43b711f013ddfecad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/path_cross_mesh.prefab using Guid(2f9f24ad655335a43b711f013ddfecad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c86bf2f74fafcef877ca10c5198ff87d') in 0.010628 seconds
+  Import took 0.012653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/traffic_light_mesh.prefab
+  artifactKey: Guid(3b6c9ca77553d2c448eb1e98dcb9f245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/traffic_light_mesh.prefab using Guid(3b6c9ca77553d2c448eb1e98dcb9f245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6729842a7778cf3d9b59d08711c0b9b') in 0.012796 seconds
+  Import took 0.015097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000143 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/fence_long_mesh.prefab
+  artifactKey: Guid(8b8dbe4e5d200294a987091552c38c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/fence_long_mesh.prefab using Guid(8b8dbe4e5d200294a987091552c38c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a776c5c59eb2b63cb8f008dcaecfff9') in 0.011871 seconds
+  Import took 0.014162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/bin_mesh.prefab
+  artifactKey: Guid(b315fa776449eec44a8591af7353afe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/bin_mesh.prefab using Guid(b315fa776449eec44a8591af7353afe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f5d155db87c5175cfe463e3918b6a2b') in 0.007748 seconds
+  Import took 0.009845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Umbrella_03.prefab
+  artifactKey: Guid(f5bc3db758721a3448188be1931d14b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Umbrella_03.prefab using Guid(f5bc3db758721a3448188be1931d14b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '295b18d630248875149c41bd3688b17f') in 0.023143 seconds
+  Import took 0.025512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Tree_02.prefab
+  artifactKey: Guid(17a4ffb1eae17e94298de2c66e171a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Tree_02.prefab using Guid(17a4ffb1eae17e94298de2c66e171a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dddb38d6e8743b512fdb319ec68fcc9a') in 0.029156 seconds
+  Import took 0.031296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/hydrant_mesh.prefab
+  artifactKey: Guid(d640ca176c8536040aded4c2dc0fe3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/hydrant_mesh.prefab using Guid(d640ca176c8536040aded4c2dc0fe3fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18feed929560a43cca66aefdbf0e1113') in 0.016696 seconds
+  Import took 0.019012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/billboard_mesh.prefab
+  artifactKey: Guid(8db24802b0170464c9267f3c45e6f7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/billboard_mesh.prefab using Guid(8db24802b0170464c9267f3c45e6f7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d74b84852bf3f04ab99ff2a15d917c') in 0.015049 seconds
+  Import took 0.017267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/trash_mesh.prefab
+  artifactKey: Guid(dc289fda3255c0c45a5b68320f21b278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/trash_mesh.prefab using Guid(dc289fda3255c0c45a5b68320f21b278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc4957cf8b1ed38253db497839496df9') in 0.012236 seconds
+  Import took 0.014406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Props_Buoy_02.prefab
+  artifactKey: Guid(9422082c93e78104ea266acd47cb4bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Props_Buoy_02.prefab using Guid(9422082c93e78104ea266acd47cb4bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6425fe5a04b48049fdd77d95f838b3f9') in 0.012657 seconds
+  Import took 0.015396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/fence_short_spike.prefab
+  artifactKey: Guid(cb26b368ec58db941ab63abd80a23f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/fence_short_spike.prefab using Guid(cb26b368ec58db941ab63abd80a23f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab095e0c378f9aca3d7c7f83f266c426') in 0.023301 seconds
+  Import took 0.025567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/pipe_mesh.prefab
+  artifactKey: Guid(3922530b369032f418f332a0fd30b3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/pipe_mesh.prefab using Guid(3922530b369032f418f332a0fd30b3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d3021919e5dcccf00d843c4ddf069c') in 0.018694 seconds
+  Import took 0.021078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Beachseat_03.prefab
+  artifactKey: Guid(798d0ce4417055244b0da7dbdd7cb46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Prop_Beachseat_03.prefab using Guid(798d0ce4417055244b0da7dbdd7cb46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a8bb7ede0bd92fccf6747f16de843e') in 0.012244 seconds
+  Import took 0.014480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/Env_Planter.prefab
+  artifactKey: Guid(32ed34c17828f7b4fa14413b82b9b590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/Env_Planter.prefab using Guid(32ed34c17828f7b4fa14413b82b9b590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7209b5f45d9fb5f4888ee3ed48f29c7c') in 0.011516 seconds
+  Import took 0.013760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/tree_small_mesh.prefab
+  artifactKey: Guid(6d53ac9a81f80b6449e442c4c8bf8a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/tree_small_mesh.prefab using Guid(6d53ac9a81f80b6449e442c4c8bf8a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85cb334f4a6be5f79331328af5a20598') in 0.011467 seconds
+  Import took 0.013612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/grave_medium_mesh.prefab
+  artifactKey: Guid(a43f17a10ac27c748bc0ffbaa8a6fe2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/grave_medium_mesh.prefab using Guid(a43f17a10ac27c748bc0ffbaa8a6fe2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b74ab9e30e32c0a9c92c2b285af41d7') in 0.010576 seconds
+  Import took 0.012782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/grave_small_mesh.prefab
+  artifactKey: Guid(2367423c3655b76479076789d8650e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/grave_small_mesh.prefab using Guid(2367423c3655b76479076789d8650e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50bb9be29435b49c65d818ab3e843f26') in 0.010732 seconds
+  Import took 0.012825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/ExternalPackages/SimpleTown/Prefabs/Props/tree_medium_mesh.prefab
+  artifactKey: Guid(471d45b220915504f893693209abc57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalPackages/SimpleTown/Prefabs/Props/tree_medium_mesh.prefab using Guid(471d45b220915504f893693209abc57d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc1ea0ae2737dfd86bed9bf449db013f') in 0.010748 seconds
+  Import took 0.012838 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001780 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.281 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 99.5 MB.
+System memory in use after: 99.6 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2185.
+Total: 1.391000 ms (FindLiveObjects: 0.133300 ms CreateObjectMapping: 0.042600 ms MarkObjects: 1.172500 ms  DeleteObjects: 0.041800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.943839 seconds.
+  path: Assets/Prefabs/Traffic/SlowdownTrail.prefab
+  artifactKey: Guid(3b9baed49089fbc419ba63428c7f9f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Traffic/SlowdownTrail.prefab using Guid(3b9baed49089fbc419ba63428c7f9f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10585b7a6e71db2538b7c0e93d517f4f') in 0.040947 seconds
+  Import took 0.043084 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001649 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.235 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.0 MB.
+System memory in use after: 105.1 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2193.
+Total: 1.454800 ms (FindLiveObjects: 0.137700 ms CreateObjectMapping: 0.046200 ms MarkObjects: 1.227000 ms  DeleteObjects: 0.043100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001770 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.215 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2199.
+Total: 1.469000 ms (FindLiveObjects: 0.136200 ms CreateObjectMapping: 0.043500 ms MarkObjects: 1.243600 ms  DeleteObjects: 0.045100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001703 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.196 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.8 MB.
+System memory in use after: 115.8 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2205.
+Total: 1.421800 ms (FindLiveObjects: 0.135000 ms CreateObjectMapping: 0.047700 ms MarkObjects: 1.196100 ms  DeleteObjects: 0.042000 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

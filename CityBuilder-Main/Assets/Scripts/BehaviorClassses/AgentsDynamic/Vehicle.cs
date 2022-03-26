@@ -14,11 +14,14 @@ public class Vehicle
     public List<Person> Passengers { get; set; }
     public VehicleController VehicleController { get; set; }
     public int Capacity { get; set; }
+    public IDictionary<string, PoolingAgent> PoolingAgents { get; set; }
+    public GameObject Obstacle { get; set; }
 
     public Vehicle(
         VehicleType type,
         GameObject obj,
         PathFollow pathFollow,
+        PoolingAgent slowdownPooler,
         int? capacity = null,
         List<Cargo> cargoList = null,
         Person driver = null,
@@ -28,6 +31,11 @@ public class Vehicle
         ObjectSettings = new ObjectSettings(obj);
         VehicleController = obj.GetComponent<VehicleController>();
         PathFollow = pathFollow;
+
+        PoolingAgents = new Dictionary<string, PoolingAgent>()
+        {
+            { "SlowdownPooler", slowdownPooler }
+        };
         
 
         if (cargoList != null)

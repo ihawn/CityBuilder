@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5402757673789068093}
   - component: {fileID: -8395015200833889944}
   m_Layer: 0
-  m_Name: cop_mesh
+  m_Name: cop_mesh 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

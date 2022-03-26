@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3243922637239743014}
   - component: {fileID: 4642781403201786500}
   m_Layer: 0
-  m_Name: fire_truck_mesh
+  m_Name: fire_truck_mesh 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

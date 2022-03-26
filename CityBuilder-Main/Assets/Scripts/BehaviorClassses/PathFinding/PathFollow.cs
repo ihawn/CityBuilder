@@ -52,6 +52,7 @@ public class PathFollow
         DistanceTraveled = 0;
         StartNodeId = startNodeId;
         DestinationNodeId = endNodeId;
+
         Path = endNodeId == null ? null : AStar.GetShortestPath(nodes[startNodeId], nodes[endNodeId.Value], nodes);
 
         if (Path != null)
