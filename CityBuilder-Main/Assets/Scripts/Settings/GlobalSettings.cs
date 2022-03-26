@@ -20,6 +20,10 @@ public class GlobalSettings : MonoBehaviour
     public static float SlowAccelerationVehicle;
     public float speedAccelerationVehicle = 2f;
     public static float SpeedAccelerationVehicle;
+    public float slowdownTrailDropOffset = 0.025f;
+    public static float SlowdownTrailDropOffset;
+    public float startSlowdownThreshold = 1.5f;
+    public static float StartSlowdownThreshold;
 
     [Header("Road Parameters")]
     public float speedLimit = 5;
@@ -44,6 +48,8 @@ public class GlobalSettings : MonoBehaviour
         IntersectionTimings = intersectionTimings;
         SlowAccelerationVehicle = slowAccelerationVehicle;
         SpeedAccelerationVehicle = speedAccelerationVehicle;
+        SlowdownTrailDropOffset = slowdownTrailDropOffset;
+        StartSlowdownThreshold = startSlowdownThreshold;
         Time.timeScale = timescale;
     }
 }

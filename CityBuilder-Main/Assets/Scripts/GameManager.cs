@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GlobalSettings GlobalSettings;
     public GameObject Paths;
     public PathCreatorController DebugMethods;
+    public PoolerInit PoolerInit;
 
     [Header("Initializers")]
     public PathInit PathInit;
@@ -36,7 +37,8 @@ public class GameManager : MonoBehaviour
         PathInit.Init();
         VehicleInit.Init();
         IntersectionInit.Init();
-        PanAndZoom.Init();        
+        PanAndZoom.Init();
+        PoolerInit.Init();
     }
 
     void Update()

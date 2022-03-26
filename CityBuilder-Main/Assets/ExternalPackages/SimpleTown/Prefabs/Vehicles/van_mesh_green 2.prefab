@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4510766246559813781}
   - component: {fileID: 8333142130556717815}
   m_Layer: 0
-  m_Name: van_mesh_green
+  m_Name: van_mesh_green 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
