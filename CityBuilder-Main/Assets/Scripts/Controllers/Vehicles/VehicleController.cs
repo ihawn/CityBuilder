@@ -67,7 +67,6 @@ public class VehicleController : MonoBehaviour
         float distFromEnd = Vector3.Distance(transform.position, path.GetPointAtDistance(path.length));
         if(distFromEnd < 2*pf.Speed*Time.deltaTime)
         {
-            Debug.Log("Destination reached");
             SetRandomPathFromCurrentNode();
         }
     }
@@ -77,12 +76,13 @@ public class VehicleController : MonoBehaviour
         GameManager gm = GlobalSettings.GameManager;
         List<Node> possibleDestinations = gm.Nodes.Where(x => x.Id != pf.DestinationNodeId).ToList();
         int nextId = possibleDestinations[Random.Range(0, possibleDestinations.Count)].Id;
-        SetNextDestination(nextId);
+
+        SetNextDestination(nextId, fromRandom: true);
     }
 
-    void SetNextDestination(int nodeId)
+    void SetNextDestination(int nodeId, bool fromRandom = false)
     {
-        pf.SetPath(pf.DestinationNodeId.Value, nodeId);
+        pf.SetPath(pf.DestinationNodeId.Value, nodeId, fromRandom);
         pf.StartNodeId = pf.DestinationNodeId.Value;
         pf.DestinationNodeId = nodeId;
     }
