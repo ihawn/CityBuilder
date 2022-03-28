@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         GlobalSettings.UpdateParameters();
-        //PanAndZoom.UpdateCameraTransform();
+        PanAndZoom.UpdateCameraTransform();
         ControllerBase.UpdateControllers();
     }
 }

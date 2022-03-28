@@ -37,7 +37,10 @@ public class GlobalSettings : MonoBehaviour
         { IntersectionState.left, 5 },
         { IntersectionState.right, 5 }
     };
+    public float trafficLightIntensity = 0.5f;
+    public static float TrafficLightIntensity;
     public static Dictionary<IntersectionState, float> IntersectionTimings;
+
 
     public void UpdateParameters()
     {
@@ -50,6 +53,7 @@ public class GlobalSettings : MonoBehaviour
         SpeedAccelerationVehicle = speedAccelerationVehicle;
         SlowdownTrailDropOffset = slowdownTrailDropOffset;
         StartSlowdownThreshold = startSlowdownThreshold;
+        TrafficLightIntensity = trafficLightIntensity;
         Time.timeScale = timescale;
     }
 }

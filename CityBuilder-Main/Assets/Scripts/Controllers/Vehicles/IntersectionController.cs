@@ -9,6 +9,8 @@ public class IntersectionController : MonoBehaviour
     public float cycleTimer;
     public float nextTime;
     float slowZoneOffset = -2;
+    List<IDictionary<string, Light>> lights = new List<IDictionary<string, Light>>();
+
     public IDictionary<IntersectionState, Color> LightColors = new Dictionary<IntersectionState, Color>()
     {
         { IntersectionState.straight, Color.green },
@@ -16,6 +18,37 @@ public class IntersectionController : MonoBehaviour
         { IntersectionState.orthogonal, Color.red },
         { IntersectionState.left, Color.cyan }
     };
+
+    public void Init()
+    {
+        foreach(Transform trans in transform)
+        {
+            if(trans.name.Contains("traffic_light"))
+            {
+                foreach (Transform t in trans)
+                {
+                    if (t.tag == "light")
+                    {
+                        var lightDict = new Dictionary<string, Light>();
+
+                        var l1 = t.GetChild(0).GetComponent<Light>();
+                        var l2 = t.GetChild(1).GetComponent<Light>();
+                        var l3 = t.GetChild(2).GetComponent<Light>();
+
+                        l1.intensity = 0;
+                        l2.intensity = 0;
+                        l3.intensity = 0;
+
+                        lightDict.Add("red", l1);
+                        lightDict.Add("yellow", l2);
+                        lightDict.Add("green", l3);
+
+                        lights.Add(lightDict);
+                    }
+                }
+            }
+        }
+    }
 
     public void UpdateIntersection()
     {
@@ -81,5 +114,26 @@ public class IntersectionController : MonoBehaviour
                 i++;
             }
         }
+
+        SetTrafficLightsAll(b);
+    }
+
+    void SetTrafficLightsAll(bool green)
+    {
+        int offset = green ? 1 : 0;
+        for(int i = 0; i < 4; i++)
+        {
+            SetTrafficLightsIndividual(i, (i + offset) % 2 == 0);
+        }
+    }
+
+    void SetTrafficLightsIndividual(int index, bool green)
+    {
+        float lux = GlobalSettings.TrafficLightIntensity;
+        lights[index]["red"].intensity = green ? 0 : lux;
+        lights[index]["green"].intensity = green ? lux*0.5f : 0;
+
+        lights[index]["red"].gameObject.SetActive(!green);
+        lights[index]["green"].gameObject.SetActive(green);
     }
 }
