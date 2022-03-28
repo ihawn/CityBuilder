@@ -5,6 +5,7 @@ using UnityEngine;
 public class Intersection
 {
     public IntersectionState State { get; set; }
+    public bool OneIsYellow { get; set; }
     public Dictionary<IntersectionState, float> Timings { get; set; }
     public IntersectionController IntersectionController { get; set; }
     public List<GameObject> SlowZones { get; set; }

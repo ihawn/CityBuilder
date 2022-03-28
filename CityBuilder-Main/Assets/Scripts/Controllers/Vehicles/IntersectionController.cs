@@ -73,9 +73,13 @@ public class IntersectionController : MonoBehaviour
 
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", LightColors[Intersection.State]);
         }
+        else if(!Intersection.OneIsYellow && Intersection.CycleTimer >= Intersection.NextTime - GlobalSettings.YellowLightDuration)
+        {
+            SetIntersectionState(Intersection.State, oneIsYellow: true);
+        }
     }
 
-    public void SetIntersectionState(IntersectionState state)
+    public void SetIntersectionState(IntersectionState state, bool oneIsYellow = false)
     {
         switch (state)
         {
@@ -95,6 +99,18 @@ public class IntersectionController : MonoBehaviour
                 SetIntersectionChildState(true);
                 break;
         }
+
+        if(oneIsYellow)
+        {
+            if(state == IntersectionState.straight || state == IntersectionState.left)
+            {
+                SetTrafficLightsAll(true, oneIsYellow);
+            }
+            else if(state == IntersectionState.right || state == IntersectionState.orthogonal)
+            {
+                SetTrafficLightsAll(true, oneIsYellow);
+            }
+        }    
     }
 
     void SetIntersectionChildState(bool b)
@@ -115,25 +131,31 @@ public class IntersectionController : MonoBehaviour
             }
         }
 
-        SetTrafficLightsAll(b);
+        SetTrafficLightsAll(b, false);
     }
 
-    void SetTrafficLightsAll(bool green)
+    void SetTrafficLightsAll(bool green, bool oneIsYellow)
     {
         int offset = green ? 1 : 0;
         for(int i = 0; i < 4; i++)
         {
-            SetTrafficLightsIndividual(i, (i + offset) % 2 == 0);
+            SetTrafficLightsIndividual(i, (i + offset) % 2 == 0, oneIsYellow);
         }
     }
 
-    void SetTrafficLightsIndividual(int index, bool green)
+    void SetTrafficLightsIndividual(int index, bool green, bool oneIsYellow)
     {
         float lux = GlobalSettings.TrafficLightIntensity;
+        bool yellow = (oneIsYellow && index % 2 == 0) || (oneIsYellow && index % 2 == 1);
+
         lights[index]["red"].intensity = green ? 0 : lux;
-        lights[index]["green"].intensity = green ? lux*0.5f : 0;
+        lights[index]["green"].intensity = green && !oneIsYellow ? lux*0.5f : 0;
+        lights[index]["yellow"].intensity = green && oneIsYellow ? lux*0.75f : 0;
 
         lights[index]["red"].gameObject.SetActive(!green);
-        lights[index]["green"].gameObject.SetActive(green);
+        lights[index]["green"].gameObject.SetActive(green && !yellow);
+        lights[index]["yellow"].gameObject.SetActive(green && yellow);
+
+        Intersection.OneIsYellow = oneIsYellow;
     }
 }

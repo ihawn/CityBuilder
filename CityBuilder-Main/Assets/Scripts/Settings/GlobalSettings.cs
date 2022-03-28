@@ -37,6 +37,8 @@ public class GlobalSettings : MonoBehaviour
         { IntersectionState.left, 5 },
         { IntersectionState.right, 5 }
     };
+    public float yellowLightDuration = 1;
+    public static float YellowLightDuration;
     public float trafficLightIntensity = 0.5f;
     public static float TrafficLightIntensity;
     public static Dictionary<IntersectionState, float> IntersectionTimings;
@@ -54,6 +56,7 @@ public class GlobalSettings : MonoBehaviour
         SlowdownTrailDropOffset = slowdownTrailDropOffset;
         StartSlowdownThreshold = startSlowdownThreshold;
         TrafficLightIntensity = trafficLightIntensity;
+        YellowLightDuration = yellowLightDuration;
         Time.timeScale = timescale;
     }
 }
