@@ -23,6 +23,7 @@ public class IntersectionInit : MonoBehaviour
 
             i.Id = id;
             IntersectionController ic = g.GetComponent<IntersectionController>();
+            ic.Init();
             ic.SetIntersectionState(i.State);
             ic.GetComponent<Renderer>().material.SetColor("_Color", ic.LightColors[i.State]);
             i.IntersectionController = ic;
