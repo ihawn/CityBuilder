@@ -45,7 +45,7 @@ public class PathFollow
         }
     }
 
-    public void SetPath(int startNodeId, int? endNodeId)
+    public void SetPath(int startNodeId, int? endNodeId, bool fromRandom = false)
     {
         var nodes = GlobalSettings.GameManager.Nodes;
 
@@ -54,6 +54,16 @@ public class PathFollow
         DestinationNodeId = endNodeId;
 
         Path = endNodeId == null ? null : AStar.GetShortestPath(nodes[startNodeId], nodes[endNodeId.Value], nodes);
+
+        //Prevent generating a random path from returning a 1 point path
+        //Will cause car to teleport
+        if (endNodeId != null && fromRandom)
+        {
+            while (Path.Count < 3)
+            {
+                Path = AStar.GetShortestPath(nodes[Random.Range(0, nodes.Count)], nodes[Random.Range(0, nodes.Count)], nodes);
+            }
+        }
 
         if (Path != null)
         {
