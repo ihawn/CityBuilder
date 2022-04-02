@@ -28,7 +28,5 @@ public class Intersection
 public enum IntersectionState
 {
     straight = 0,
-    right = 1,
-    orthogonal = 2,
-    left = 3,
+    orthogonal = 1
 }

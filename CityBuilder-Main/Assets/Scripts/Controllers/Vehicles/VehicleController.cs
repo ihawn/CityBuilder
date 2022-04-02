@@ -102,7 +102,7 @@ public class VehicleController : MonoBehaviour
             else
             {
                 float dist = Vector3.Distance(vehicle.Obstacle.transform.position, transform.position);
-                pf.Acceleration = pf.SlowAcceleration * GlobalSettings.StartSlowdownThreshold / Mathf.Max(Mathf.Abs(dist - GlobalSettings.StartSlowdownThreshold), 0.01f);
+                pf.Acceleration = pf.SlowAcceleration * Mathf.Max(GlobalSettings.StartSlowdownThreshold - dist, 0);
             }
             pf.Slowing = true;
         }
@@ -115,6 +115,7 @@ public class VehicleController : MonoBehaviour
         {
             case "SlowZone":
                 slowzoneObjectsCount++;
+                vehicle.Obstacle = other.gameObject;
                 break;
             case "ObstacleSlowZone":
                 slowzoneObjectsCount++;
@@ -132,8 +133,10 @@ public class VehicleController : MonoBehaviour
                 break;
             case "ObstacleSlowZone":
                 slowzoneObjectsCount--;
-                vehicle.Obstacle = null;
                 break;
         }
+
+        if (slowzoneObjectsCount == 0)
+            vehicle.Obstacle = null;
     }
 }

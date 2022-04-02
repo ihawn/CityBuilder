@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 5120
     height: 1357
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 10}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 334
     height: 1036
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 26}
   m_Panes:
   - {fileID: 26}
@@ -126,10 +126,10 @@ MonoBehaviour:
     y: 1036
     width: 4576
     height: 271
-  m_MinSize: {x: 333, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+  m_MinSize: {x: 332, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 161
+  controlID: 149
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 1179, y: 492}
   m_MaxSize: {x: 20004, y: 14042}
   vertical: 0
-  controlID: 208
+  controlID: 297
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,8 +200,8 @@ MonoBehaviour:
     y: 0
     width: 1527
     height: 1036
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 28}
   m_Panes:
   - {fileID: 16}
@@ -227,8 +227,8 @@ MonoBehaviour:
     y: 0
     width: 1430
     height: 271
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 29}
   m_Panes:
   - {fileID: 22}
@@ -258,7 +258,7 @@ MonoBehaviour:
     y: 0
     width: 5120
     height: 1357
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_MinSize: {x: 904, y: 492}
   m_MaxSize: {x: 16004, y: 14042}
   vertical: 1
-  controlID: 209
+  controlID: 185
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_MinSize: {x: 904, y: 221}
   m_MaxSize: {x: 16004, y: 4021}
   vertical: 0
-  controlID: 210
+  controlID: 186
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 16542
+  m_LastSelectedObjectID: 16694
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1068,22 +1068,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Traffic
+    - Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Traffic
+  - Assets/ExternalPackages/SimpleTown/Prefabs/Vehicles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Isaac\Documents\_games\CityBuilder\CityBuilder-Main
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 258}
-    m_SelectedIDs: 42470000
-    m_LastClickedID: 18242
-    m_ExpandedIDs: 00000000fc460000fe46000000470000024700000447000006470000084700000a4700000c4700004647000000ca9a3b
+    scrollPos: {x: 0, y: 198}
+    m_SelectedIDs: 20470000
+    m_LastClickedID: 18208
+    m_ExpandedIDs: 00000000fc460000fe46000000470000024700000447000006470000084700000a4700000c4700003247000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1234,7 +1234,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1afbffff
+      m_ExpandedIDs: 1afbffff36410000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1294,9 +1294,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.7879734, y: 1.146548, z: -1.2406161}
+    m_Target: {x: 0.02725935, y: 1.5365295, z: 3.041809}
     speed: 2
-    m_Value: {x: 2.7879734, y: 1.146548, z: -1.2406161}
+    m_Value: {x: 0.17741013, y: 1.3619218, z: 2.068271}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1343,13 +1343,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20739041, y: 0.12316028, z: -0.024799578, w: -0.96994394}
+    m_Target: {x: -0.43690637, y: -0.41544878, z: 0.24088268, w: -0.7603164}
     speed: 2
-    m_Value: {x: -0.2074334, y: 0.12318581, z: -0.024804719, w: -0.970145}
+    m_Value: {x: -0.3097707, y: -0.41416347, z: 0.15310225, w: -0.8420632}
   m_Size:
-    m_Target: 0.020905005
+    m_Target: 2.120905
     speed: 2
-    m_Value: 0.020905005
+    m_Value: 3.662776
   m_Ortho:
     m_Target: 0
     speed: 2
