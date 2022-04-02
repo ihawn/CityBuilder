@@ -5896,6 +5896,7 @@ MonoBehaviour:
   startSlowdownThreshold: 1.5
   speedLimit: 2
   laneOffset: 0
+  yellowLightDuration: 1
   trafficLightIntensity: 1
 --- !u!4 &1671357184
 Transform:

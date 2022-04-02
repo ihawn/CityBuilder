@@ -32,11 +32,11 @@ public class GlobalSettings : MonoBehaviour
     public static float LaneOffset;
     public Dictionary<IntersectionState, float> intersectionTimings = new Dictionary<IntersectionState, float>()
     {
-        { IntersectionState.straight, 10 },
-        { IntersectionState.orthogonal, 10 },
-        { IntersectionState.left, 5 },
-        { IntersectionState.right, 5 }
+        { IntersectionState.straight, 5 },
+        { IntersectionState.orthogonal, 5 }
     };
+    public float yellowLightDuration = 1;
+    public static float YellowLightDuration;
     public float trafficLightIntensity = 0.5f;
     public static float TrafficLightIntensity;
     public static Dictionary<IntersectionState, float> IntersectionTimings;
@@ -54,6 +54,7 @@ public class GlobalSettings : MonoBehaviour
         SlowdownTrailDropOffset = slowdownTrailDropOffset;
         StartSlowdownThreshold = startSlowdownThreshold;
         TrafficLightIntensity = trafficLightIntensity;
+        YellowLightDuration = yellowLightDuration;
         Time.timeScale = timescale;
     }
 }

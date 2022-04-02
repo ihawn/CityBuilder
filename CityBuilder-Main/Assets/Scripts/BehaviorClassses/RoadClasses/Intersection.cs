@@ -5,6 +5,7 @@ using UnityEngine;
 public class Intersection
 {
     public IntersectionState State { get; set; }
+    public bool OneIsYellow { get; set; }
     public Dictionary<IntersectionState, float> Timings { get; set; }
     public IntersectionController IntersectionController { get; set; }
     public List<GameObject> SlowZones { get; set; }
@@ -27,7 +28,5 @@ public class Intersection
 public enum IntersectionState
 {
     straight = 0,
-    right = 1,
-    orthogonal = 2,
-    left = 3,
+    orthogonal = 1
 }
