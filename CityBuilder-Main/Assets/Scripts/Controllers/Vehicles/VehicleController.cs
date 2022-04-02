@@ -23,6 +23,7 @@ public class VehicleController : MonoBehaviour
             transform.position = path.GetPointAtDistance(pf.DistanceTraveled) + offset;
             transform.rotation = path.GetRotationAtDistance(pf.DistanceTraveled) * Quaternion.Euler(pf.Forwards ? 180 : 0, 0, 90);
 
+            pf.SetDetectorPosition();
             UpdateSlowdownTrail();
             UpdateAcceleration();
             CheckForDestination(path);
