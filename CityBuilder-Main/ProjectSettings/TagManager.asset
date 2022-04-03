@@ -11,6 +11,8 @@ TagManager:
   - NodeSocketJoined
   - ObstacleSlowZone
   - light
+  - Vehicle
+  - Detector
   layers:
   - Default
   - TransparentFX

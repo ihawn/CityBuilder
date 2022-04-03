@@ -24,10 +24,10 @@ public class GlobalSettings : MonoBehaviour
     public static float SlowdownTrailDropOffset;
     public float startSlowdownThreshold = 1.5f;
     public static float StartSlowdownThreshold;
-    public int detectorCountFront = 15;
-    public static int DetectorCountFront;
-    public int detectorCountBack = 15;
-    public static int DetectorCountBack;
+    public float detectorLength = 15;
+    public static float DetectorLength;
+    public float detectorWidth = 15;
+    public static float DetectorWidth;
 
     [Header("Road Parameters")]
     public float speedLimit = 5;
@@ -59,8 +59,8 @@ public class GlobalSettings : MonoBehaviour
         StartSlowdownThreshold = startSlowdownThreshold;
         TrafficLightIntensity = trafficLightIntensity;
         YellowLightDuration = yellowLightDuration;
-        DetectorCountBack = detectorCountBack;
-        DetectorCountFront = detectorCountFront;
+        DetectorLength = detectorLength;
+        DetectorWidth = detectorWidth;
         Time.timeScale = timescale;
     }
 }

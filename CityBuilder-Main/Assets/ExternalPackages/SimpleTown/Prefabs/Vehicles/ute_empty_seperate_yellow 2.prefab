@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 8670114385393458768}
   m_Layer: 0
   m_Name: ute_empty_seperate_yellow 2
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,6 +439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   curveMagnitude: 0
+  distanceFromLastSlowdownTrail: 0
+  slowzoneObjectsCount: 0
 --- !u!54 &8670114385393458768
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class VehicleInit : MonoBehaviour
         {
             List<Node> nodeCopy = new List<Node>(gm.Nodes);
             PathFollow pf = new PathFollow(PathType.road, Random.Range(0,250), g, destinationNodeId: Random.Range(251, 360));
-            Vehicle v = new Vehicle(VehicleType.car, g, pf, gm.PoolerInit.Poolers[0]);
+            Vehicle v = new Vehicle(VehicleType.car, g, pf);
             var vc = g.GetComponent<VehicleController>();
             g.transform.position = gm.Nodes[204].Position;
             vc.vehicle = v;

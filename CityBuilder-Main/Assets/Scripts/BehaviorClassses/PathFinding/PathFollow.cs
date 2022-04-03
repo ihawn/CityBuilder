@@ -9,6 +9,7 @@ public class PathFollow
 {
     public PathCreator PathCreator { get; set; }
     public GameObject FollowerObject { get; set; }
+    public object FollowerController { get; set; }
     public float Speed { get; set; }
     public float SpeedLimit { get; set; }
     public float DistanceTraveled { get; set; }
@@ -21,9 +22,8 @@ public class PathFollow
     public int? DestinationNodeId { get; set; }
     public int StartNodeId { get; set; }
     public List<Node> Path { get; set; }
-    public List<GameObject> Detectors { get; set; }
-    public float DetectorOffset { get; }
-    public float DetectorRadius { get; }
+    public GameObject Detector { get; set; }
+    public float DetectorLength { get; }
 
     public PathFollow(
         PathType type,
@@ -32,9 +32,7 @@ public class PathFollow
         float? speedLimit = null,
         float? speedAcceleration = null,
         float? slowAcceleration = null,
-        int? destinationNodeId = null,
-        float detectorOffset = 0.05f,
-        float detectorRadius = 0.025f)
+        int? destinationNodeId = null)
     {
         Acceleration = 0;
 
@@ -44,9 +42,9 @@ public class PathFollow
         {
             case PathType.road:
                 FollowerObject = followerObject;
-                MakeDetectors(GlobalSettings.DetectorCountFront, GlobalSettings.DetectorCountBack);
-                DetectorOffset = detectorOffset;
-                DetectorRadius = detectorRadius;
+                FollowerController = followerObject.GetComponent<VehicleController>();
+                DetectorLength = GlobalSettings.DetectorLength;
+                MakeDetector();
                 Speed = destinationNodeId == null ? 0 : GlobalSettings.SpeedLimit;
                 SpeedLimit = speedLimit == null ? GlobalSettings.SpeedLimit : speedLimit.Value;
                 SpeedAcceleration = speedAcceleration == null ? GlobalSettings.SpeedAccelerationVehicle : speedAcceleration.Value;
@@ -97,54 +95,35 @@ public class PathFollow
         return Mathf.Clamp(1 - Vector3.Angle(n1, n2)/45, 0.4f, 1f);
     }
 
-    public void MakeDetectors(int countForwards, int countBackwards)
+    public void MakeDetector()
     {
-        Detectors = new List<GameObject>();
+        GameObject g = new GameObject();
+        g.name = "Detector";
+        g.AddComponent<BoxCollider>();
+        g.GetComponent<BoxCollider>().isTrigger = true;
+        g.GetComponent<BoxCollider>().size = new Vector3(GlobalSettings.DetectorWidth, GlobalSettings.DetectorWidth, GlobalSettings.DetectorLength);
+        g.AddComponent<DetectorController>();
+        g.GetComponent<DetectorController>().ParentPathFollowController = FollowerController;
+        g.AddComponent<Rigidbody>();
+        g.GetComponent<Rigidbody>().isKinematic = true;
+        g.GetComponent<Rigidbody>().useGravity = false;
+        g.tag = "Detector";
+        g.transform.parent = GlobalSettings.GameManager.DetectorContainer.transform;
 
-        for(int i = 0; i < countForwards; i++)
-        {
-            GameObject g = new GameObject();
-            g.name = "DetectorForwards (" + i + ")";
-            g.AddComponent<SphereCollider>();
-            g.GetComponent<SphereCollider>().isTrigger = true;
-            g.GetComponent<SphereCollider>().radius = DetectorRadius;
-            g.transform.parent = GlobalSettings.GameManager.DetectorContainer.transform;
-            Detectors.Add(g);
-        }
-        for (int i = 0; i < countBackwards; i++)
-        {
-            GameObject g = new GameObject();
-            g.name = "DetectorBackwards (" + i + ")";
-            g.AddComponent<SphereCollider>();
-            g.GetComponent<SphereCollider>().isTrigger = true;
-            g.GetComponent<SphereCollider>().radius = DetectorRadius;
-            g.transform.parent = GlobalSettings.GameManager.DetectorContainer.transform;
-            Detectors.Add(g);
-        }
+        Detector = g;
     }
 
     public void SetDetectorPosition()
     {
         float objectLength = Vector3.Magnitude(FollowerObject.GetComponent<MeshRenderer>().bounds.size);
-        float forwardsOffset = -objectLength*DetectorOffset*10;
-        float backwardsOffset = objectLength*DetectorOffset*10;
-        Vector3 pos = Vector3.zero;
-        foreach(GameObject g in Detectors)
-        {
-            if (g.name.Contains("Forwards"))
-            {
-                forwardsOffset -= DetectorOffset;
-                pos = PathCreator.path.GetPointAtDistance(DistanceTraveled + forwardsOffset);
-            }
-                
-            else if (g.name.Contains("Backwards"))
-            {
-                backwardsOffset += DetectorOffset;
-                pos = PathCreator.path.GetPointAtDistance(DistanceTraveled + backwardsOffset);
-            }
+        float forwardsOffset = -(objectLength + DetectorLength)/2;
+        Detector.transform.position = PathCreator.path.GetPointAtDistance(DistanceTraveled + forwardsOffset);
+        Detector.transform.rotation = PathCreator.path.GetRotationAtDistance(DistanceTraveled + forwardsOffset);
+    }
 
-            g.transform.position = pos;
-        }
+    public bool IsAheadOf(PathFollow otherPf)
+    {
+        return Vector3.Dot(otherPf.Detector.transform.position - Detector.transform.position, otherPf.Detector.transform.forward) >= 0;
     }
 }
 
