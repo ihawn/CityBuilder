@@ -56,8 +56,11 @@
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\Scripts\BehaviorClassses\AgentsDynamic\Vehicle.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
+    <Compile Include="Assets\Scripts\Utils\DestroyAfterSeconds.cs" />
     <Compile Include="Assets\Scripts\Settings\ObjectSettings.cs" />
     <Compile Include="Assets\Scripts\BehaviorClassses\RoadClasses\Intersection.cs" />
+    <Compile Include="Assets\Scripts\Agents\PoolingAgent.cs" />
+    <Compile Include="Assets\Scripts\Initializers\PoolerInit.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathPlacer.cs" />
     <Compile Include="Assets\Scripts\Input\CameraControlls\PanAndZoom.cs" />
     <Compile Include="Assets\Scripts\Initializers\PathInit.cs" />
@@ -75,15 +78,13 @@
     <Compile Include="Assets\Scripts\Controllers\Vehicles\VehicleController.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\Scripts\Controllers\Vehicles\IntersectionController.cs" />
+    <Compile Include="Assets\Scripts\Utils\DestroyAfterDistanceFromObject.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Properties\NodeProperties.cs" />
     <Compile Include="Assets\Scripts\Settings\GlobalSettings.cs" />
     <Compile Include="Assets\Scripts\Initializers\IntersectionInit.cs" />
     <Compile Include="Assets\ExternalPackages\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
-    <Compile Include="Assets\Scripts\Agents\PoolingAgent.cs" />
-    <Compile Include="Assets\Scripts\Initializers\PoolerInit.cs" />
-    <Compile Include="Assets\Scripts\Utils\DestroyAfterSeconds.cs" />
-    <Compile Include="Assets\Scripts\Utils\DestroyAfterDistanceFromObject.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Paths\DetectorController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Packages\Microsoft.NETCore.Platforms.1.1.0\ThirdPartyNotices.txt" />

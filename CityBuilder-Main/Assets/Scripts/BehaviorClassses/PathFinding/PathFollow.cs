@@ -9,6 +9,7 @@ public class PathFollow
 {
     public PathCreator PathCreator { get; set; }
     public GameObject FollowerObject { get; set; }
+    public object FollowerController { get; set; }
     public float Speed { get; set; }
     public float SpeedLimit { get; set; }
     public float DistanceTraveled { get; set; }
@@ -21,10 +22,13 @@ public class PathFollow
     public int? DestinationNodeId { get; set; }
     public int StartNodeId { get; set; }
     public List<Node> Path { get; set; }
+    public GameObject Detector { get; set; }
+    public float DetectorLength { get; }
 
     public PathFollow(
         PathType type,
         int startNodeId,
+        GameObject followerObject,
         float? speedLimit = null,
         float? speedAcceleration = null,
         float? slowAcceleration = null,
@@ -37,6 +41,10 @@ public class PathFollow
         switch (type)
         {
             case PathType.road:
+                FollowerObject = followerObject;
+                FollowerController = followerObject.GetComponent<VehicleController>();
+                DetectorLength = GlobalSettings.DetectorLength;
+                MakeDetector();
                 Speed = destinationNodeId == null ? 0 : GlobalSettings.SpeedLimit;
                 SpeedLimit = speedLimit == null ? GlobalSettings.SpeedLimit : speedLimit.Value;
                 SpeedAcceleration = speedAcceleration == null ? GlobalSettings.SpeedAccelerationVehicle : speedAcceleration.Value;
@@ -85,6 +93,37 @@ public class PathFollow
         var n1 = PathCreator.path.GetNormalAtDistance(dist + (b ? 0 : offset));
         var n2 = PathCreator.path.GetNormalAtDistance(dist - (b ? offset : 0));
         return Mathf.Clamp(1 - Vector3.Angle(n1, n2)/45, 0.4f, 1f);
+    }
+
+    public void MakeDetector()
+    {
+        GameObject g = new GameObject();
+        g.name = "Detector";
+        g.AddComponent<BoxCollider>();
+        g.GetComponent<BoxCollider>().isTrigger = true;
+        g.GetComponent<BoxCollider>().size = new Vector3(GlobalSettings.DetectorWidth, GlobalSettings.DetectorWidth, GlobalSettings.DetectorLength);
+        g.AddComponent<DetectorController>();
+        g.GetComponent<DetectorController>().ParentPathFollowController = FollowerController;
+        g.AddComponent<Rigidbody>();
+        g.GetComponent<Rigidbody>().isKinematic = true;
+        g.GetComponent<Rigidbody>().useGravity = false;
+        g.tag = "Detector";
+        g.transform.parent = GlobalSettings.GameManager.DetectorContainer.transform;
+
+        Detector = g;
+    }
+
+    public void SetDetectorPosition()
+    {
+        float objectLength = Vector3.Magnitude(FollowerObject.GetComponent<MeshRenderer>().bounds.size);
+        float forwardsOffset = -(objectLength + DetectorLength)/2;
+        Detector.transform.position = PathCreator.path.GetPointAtDistance(DistanceTraveled + forwardsOffset);
+        Detector.transform.rotation = PathCreator.path.GetRotationAtDistance(DistanceTraveled + forwardsOffset);
+    }
+
+    public bool IsAheadOf(PathFollow otherPf)
+    {
+        return Vector3.Dot(otherPf.Detector.transform.position - Detector.transform.position, otherPf.Detector.transform.forward) >= 0;
     }
 }
 

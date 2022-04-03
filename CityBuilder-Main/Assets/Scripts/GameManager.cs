@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject Paths;
     public PathCreatorController DebugMethods;
     public PoolerInit PoolerInit;
+    public GameObject DetectorContainer;
 
     [Header("Initializers")]
     public PathInit PathInit;

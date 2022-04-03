@@ -23,7 +23,8 @@ public class VehicleController : MonoBehaviour
             transform.position = path.GetPointAtDistance(pf.DistanceTraveled) + offset;
             transform.rotation = path.GetRotationAtDistance(pf.DistanceTraveled) * Quaternion.Euler(pf.Forwards ? 180 : 0, 0, 90);
 
-            UpdateSlowdownTrail();
+            pf.SetDetectorPosition();
+            //UpdateSlowdownTrail();
             UpdateAcceleration();
             CheckForDestination(path);
         }
@@ -35,31 +36,6 @@ public class VehicleController : MonoBehaviour
 
         pf.Speed += pf.Acceleration * Time.deltaTime * curveMagnitude;
         pf.Speed = Mathf.Clamp(pf.Speed, 0, pf.SpeedLimit);
-    }
-
-    void UpdateSlowdownTrail()
-    {
-        distanceFromLastSlowdownTrail += pf.Speed * Time.deltaTime;
-        if (distanceFromLastSlowdownTrail >= GlobalSettings.SlowdownTrailDropOffset)
-        {
-            distanceFromLastSlowdownTrail = 0;
-            MakeSlowdownTrail();
-        }
-    }
-
-    void MakeSlowdownTrail()
-    {
-        PoolingAgent pa = vehicle.PoolingAgents["SlowdownPooler"];
-        GameObject slowdownObject = pa.GetPooledObject();
-        slowdownObject.transform.position = transform.position -
-            transform.forward * 2 * GlobalSettings.SlowdownTrailDropOffset * (pf.Forwards ? 1 : -1);
-
-        slowdownObject.SetActive(true);
-
-        DestroyAfterDistanceFromObject des = slowdownObject.GetComponent<DestroyAfterDistanceFromObject>();
-        des.obj = gameObject;
-        des.distance = GlobalSettings.SlowdownTrailDropOffset*5;
-        des.deactivate = true;
     }
 
     void CheckForDestination(VertexPath path)
@@ -102,16 +78,15 @@ public class VehicleController : MonoBehaviour
             else
             {
                 float dist = Vector3.Distance(vehicle.Obstacle.transform.position, transform.position);
-                pf.Acceleration = pf.SlowAcceleration * Mathf.Max(GlobalSettings.StartSlowdownThreshold - dist, 0);
+                pf.Acceleration = pf.SlowAcceleration / Mathf.Max(dist, 0.0001f);
             }
             pf.Slowing = true;
         }
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    public void OnDetectorTriggerEnter(GameObject other, DetectorController detectorController)
     {
-        switch(other.tag)
+        switch (other.tag)
         {
             case "SlowZone":
                 slowzoneObjectsCount++;
@@ -121,10 +96,22 @@ public class VehicleController : MonoBehaviour
                 slowzoneObjectsCount++;
                 vehicle.Obstacle = other.GetComponent<DestroyAfterDistanceFromObject>().obj;
                 break;
+            case "Vehicle":
+                slowzoneObjectsCount++;
+                vehicle.Obstacle = other.gameObject;
+                break;
+            case "Detector":
+                VehicleController otherVC = other.GetComponent<DetectorController>().ParentPathFollowController as VehicleController;
+                if(otherVC.pf.IsAheadOf(pf))
+                {
+                    slowzoneObjectsCount++;
+                    vehicle.Obstacle = otherVC.gameObject;
+                }
+                break;
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnDetectorTriggerExit(GameObject other, DetectorController detector)
     {
         switch (other.tag)
         {
@@ -134,9 +121,17 @@ public class VehicleController : MonoBehaviour
             case "ObstacleSlowZone":
                 slowzoneObjectsCount--;
                 break;
+            case "Vehicle":
+                slowzoneObjectsCount--;
+                break;
+            case "Detector":
+                slowzoneObjectsCount--;
+                break;
         }
 
         if (slowzoneObjectsCount == 0)
+        {
             vehicle.Obstacle = null;
+        }
     }
 }
